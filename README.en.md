@@ -51,6 +51,23 @@ original only — never borrow a real face.
 
 More in [gallery/README.md](gallery/README.md).
 
+### Industry benchmarks (external references — not our output)
+
+We calibrate the quality gates against top-tier AI-influencer character sheets
+(Higgsfield et al.). Their shared pattern is exactly this skill's creed:
+**signature hair + standout feature + sincere outfit + deadpan face**.
+
+<table>
+<tr>
+<td><img src="gallery/references/sheet-mushroom-hat-man.jpg" width="200"><br><sub>mushroom hat: minimal signature</sub></td>
+<td><img src="gallery/references/sheet-yapper-kid.jpg" width="200"><br><sub>propeller cap: one item = persona</sub></td>
+<td><img src="gallery/references/sheet-lavender-suit-mustache.jpg" width="200"><br><sub>lavender suit + curled mustache</sub></td>
+<td><img src="gallery/references/sheet-emo-bodybuilder.jpg" width="200"><br><sub>emo hair × muscle contrast</sub></td>
+</tr>
+</table>
+
+All 13 benchmark images → [gallery/README.md](gallery/README.md)
+
 ### Element gallery · 170-option taxonomy
 
 18 categories × 170 options, one standalone image per element (composites forbidden) —

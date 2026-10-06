@@ -46,6 +46,22 @@
 
 更多角色案例见 [gallery/README.md](gallery/README.md)。
 
+### 行业对标 · Benchmark（外部参考，非本 skill 产出）
+
+我们拿 Higgsfield 等一线 AI influencer 的角色设定表当水位线校准质量门禁——
+共同规律正是本 skill 的信条：**招牌发型 + 突出特征 + 老派着装 + 面无表情**。
+
+<table>
+<tr>
+<td><img src="gallery/references/sheet-mushroom-hat-man.jpg" width="200"><br><sub>蘑菇帽：招牌发型极简</sub></td>
+<td><img src="gallery/references/sheet-yapper-kid.jpg" width="200"><br><sub>螺旋桨帽：一件单品讲完人设</sub></td>
+<td><img src="gallery/references/sheet-lavender-suit-mustache.jpg" width="200"><br><sub>薰衣草西装 + 翘胡</sub></td>
+<td><img src="gallery/references/sheet-emo-bodybuilder.jpg" width="200"><br><sub>遮眼长发 + 肌肉反差</sub></td>
+</tr>
+</table>
+
+全部 13 张对标图 → [gallery/README.md#行业对标](gallery/README.md)
+
 ### 元素画廊 · 170 项形象分类
 
 18 个类目 × 170 个选项，每个元素一张独立单图（禁止拼图）——
