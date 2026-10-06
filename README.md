@@ -62,6 +62,16 @@
 
 全部 13 张对标图 → [gallery/README.md#行业对标](gallery/README.md)
 
+### 📹 视频案例 · Jean Phil 事件（本 skill 的现实背景）
+
+金发翘胡 + 薰衣草西装的 AI 角色两周内单条 **36M 播放**、衍生 token 手续费约 **$235K**，
+对手角色 Derek Mercer 以相反轮廓复制爆发，Higgsfield 官方亲自下场——
+本 skill 的方法论（先写人再出脸 / 招牌发型 + 突出特征 + 老派着装 + 面无表情 /
+锁定即宪法）正是这类爆款公式的工程化。
+
+👉 **[完整拆解 + 5 条视频存档 · gallery/case-study-jean-phil.md](gallery/case-study-jean-phil.md)**
+（熟脸+招牌动作+新场景 = 无限格式 · "真人还是AI"悬念 · 平台放大飞轮 · $200-300 成本账）
+
 ### 元素画廊 · 170 项形象分类
 
 18 个类目 × 170 个选项，每个元素一张独立单图（禁止拼图）——

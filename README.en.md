@@ -68,6 +68,19 @@ We calibrate the quality gates against top-tier AI-influencer character sheets
 
 All 13 benchmark images → [gallery/README.md](gallery/README.md)
 
+### 📹 Video cases · the Jean Phil phenomenon (this skill's real-world backdrop)
+
+A blond curled-mustache AI character in a lavender suit hit **36M views** on a single
+clip within two weeks, with ~$235K in derived token creator fees; rival character
+Derek Mercer (face-covering black hair × exaggerated muscles) replicated the breakout
+with the opposite silhouette, and Higgsfield itself piled in. This skill's method
+(persona-first / signature hair + standout feature + sincere outfit + deadpan /
+lock-is-law) is that viral formula turned into an engineering pipeline.
+
+👉 **[Full breakdown + 5 archived videos · gallery/case-study-jean-phil.md](gallery/case-study-jean-phil.md)**
+(familiar face + signature move + new setting = infinite format · "real or AI" suspense ·
+platform-amplification flywheel · the $200–300 cost math)
+
 ### Element gallery · 170-option taxonomy
 
 18 categories × 170 options, one standalone image per element (composites forbidden) —

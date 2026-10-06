@@ -1,6 +1,25 @@
 # 画廊 · Gallery
 
-三个区：**产出案例**（本 skill 真实出图）· **行业对标**（外部参考，定目标水位）· **元素画廊**（170 项 taxonomy 单图索引）。
+四个区：**产出案例**（本 skill 真实出图）· **行业对标**（外部参考图）· **视频案例**（Jean Phil 事件）· **元素画廊**（170 项 taxonomy 单图索引）。
+
+---
+
+## 视频案例 · Jean Phil 事件与本 skill 的背景
+
+> 完整拆解 → **[case-study-jean-phil.md](case-study-jean-phil.md)**
+> （BuBBliK《How to Make Your First $1,000,000 with AI》分析 + 爆款规律 + 与本 skill 公式的对照）
+
+Jean Phil（金发翘胡 + 薰衣草西装 + "Oui Madame"）9 月底两周内单条最高 36M 播放，
+衍生 token 手续费收入约 $235K；随后 Derek Mercer（遮眼黑发 + 肌肉）以相反轮廓
+复制爆发，Higgsfield 官方下场——AI 角色成为新的创作者范式。视频为原作者素材，仅作研究存档。
+
+| 视频 | 播放 | 看点 |
+|---|---|---|
+| [![Jean Phil Oui Madame](videos/thumbs/jeanphil-oui-madame-5.4M.jpg)](videos/jeanphil-oui-madame-5.4M.mp4) | 5.4M | 破圈之作：招牌口癖 "Oui Madame" |
+| [![Double G](videos/thumbs/jeanphil-double-g-3.7M.jpg)](videos/jeanphil-double-g-3.7M.mp4) | 3.7M | 品牌梗植入：日常场景复用公式 |
+| [![Tour Eiffel](videos/thumbs/jeanphil-tour-eiffel.jpg)](videos/jeanphil-tour-eiffel.mp4) | 290K | 地标场景：换场景仍是同一人 |
+| [![Derek Mercer](videos/thumbs/derekmercer-feelings-off-bass-on.jpg)](videos/derekmercer-feelings-off-bass-on.mp4) | 对手角色 | "Feelings off. Bass on." 极简人设 |
+| [![Higgsfield](videos/thumbs/higgsfield-ai-influencer-announce.jpg)](videos/higgsfield-ai-influencer-announce.mp4) | 3.2M | 平台官方下场：「平台放大」实锤 |
 
 ---
 
