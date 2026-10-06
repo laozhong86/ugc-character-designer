@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "scale": "0-5 per criterion (0 absent, 3 acceptable, 5 excellent). Score by LOOKING at the actual output image (display_file / vision), never from the prompt.",
+  "stages": {
+    "fullbody": {
+      "gate": "G2-fullbody",
+      "pass_score": 3.8,
+      "criteria": {
+        "thumbnail_read":   {"weight": 3, "hard_min": 3, "desc": "At ~120px the signature hair + standout feature are instantly recognizable (squint test)"},
+        "selection_fidelity": {"weight": 3, "hard_min": 3, "desc": "Every taxonomy pick is visibly present (hair, hair colour, build, distinctive, outfit, accessory)"},
+        "deadpan_sincerity": {"weight": 2, "hard_min": 2, "desc": "Expression deadpan/earnest per card; no wink, no big grin"},
+        "photoreal_texture": {"weight": 2, "hard_min": 0, "desc": "Pores, hair strands, fabric texture; no plastic/waxy skin (tier total may exaggerate shape but not texture)"},
+        "framing":          {"weight": 1, "hard_min": 2, "desc": "Full body head-to-toe, 9:16, clean light-grey backdrop, feet and head not cropped"},
+        "anatomy":          {"weight": 2, "hard_min": 3, "desc": "Hands, fingers, eyes coherent (intended exaggeration excluded)"},
+        "originality_safety": {"weight": 2, "hard_min": 4, "desc": "Does not resemble a real person/celebrity; humour from styling not from mocking ethnicity/body"}
+      }
+    },
+    "edit": {
+      "gate": "G2-edit",
+      "pass_score": 3.8,
+      "criteria": {
+        "identity_preserved": {"weight": 4, "hard_min": 4, "desc": "Face, hair, body identical to parent run"},
+        "requested_change":   {"weight": 3, "hard_min": 3, "desc": "Only the requested change happened, and it happened"},
+        "photoreal_texture":  {"weight": 1, "hard_min": 0, "desc": "No quality regression"},
+        "anatomy":            {"weight": 1, "hard_min": 3, "desc": "No new artifacts"}
+      }
+    },
+    "sheet": {
+      "gate": "G3-sheet",
+      "pass_score": 4.0,
+      "criteria": {
+        "layout":            {"weight": 2, "hard_min": 3, "desc": "5 full-body turnaround (front, 3/4 front, side, 3/4 back, back) + 3 close-ups; thin dividers; no text/labels"},
+        "cross_panel_identity": {"weight": 4, "hard_min": 4, "desc": "Same face, hair, outfit, props and colours in every panel"},
+        "ref_match":         {"weight": 3, "hard_min": 4, "desc": "Matches the locked full-body reference"},
+        "photoreal_texture": {"weight": 1, "hard_min": 0, "desc": "Consistent lighting and texture across panels"},
+        "anatomy":           {"weight": 1, "hard_min": 3, "desc": "No broken limbs between views"}
+      }
+    },
+    "scene": {
+      "gate": "G4-scene",
+      "pass_score": 3.8,
+      "criteria": {
+        "ref_match":        {"weight": 4, "hard_min": 4, "desc": "Same character as sheet (hair, face, outfit or intended outfit swap only)"},
+        "format_hook":      {"weight": 2, "hard_min": 2, "desc": "First-frame hook readable: movement/face/text reason not to scroll"},
+        "safe_zone":        {"weight": 1, "hard_min": 2, "desc": "Face in upper-middle safe zone of 9:16, away from UI overlays"},
+        "photoreal_texture": {"weight": 1, "hard_min": 0, "desc": "Native UGC phone look or intended style"},
+        "anatomy":          {"weight": 1, "hard_min": 3, "desc": "Hands/props coherent"}
+      }
+    }
+  },
+  "failure_tags": {
+    "hair_drift":       {"fix": "Move hair to the first descriptive line, add shape+length+parting+fringe words, repeat hair anchor in drift guard"},
+    "feature_missing":  {"fix": "State the standout feature twice (Face line + Character notes) with size words (e.g. 'thick coke-bottle lenses that magnify the eyes')"},
+    "smile_leak":       {"fix": "Add 'lips closed, mouth neutral, no smile' to Face line; keep 'big grin' in negative"},
+    "plastic_skin":     {"fix": "Add 'visible pores, fine vellus hair, slight skin imperfections'; switch to a higher-realism model"},
+    "cropped_body":     {"fix": "Add 'full body head to toe with space above head and below feet'; use 9:16 or 2:3"},
+    "background_busy":  {"fix": "Repeat 'plain seamless light-grey backdrop'; remove scene nouns"},
+    "identity_drift":   {"fix": "Use edit/reference mode with the locked ref; edit prompt must say 'keep everything identical except X'"},
+    "sheet_layout":     {"fix": "Spell out the two-row layout with numbered panels; add 'clean thin white dividing lines, no text'"},
+    "panel_inconsistency": {"fix": "Paste the full CHARACTER paragraph verbatim; add 'must match exactly in every panel'"},
+    "anatomy_hands":    {"fix": "Arms hanging by sides, hands relaxed; add hand terms to negative"},
+    "tier_mismatch":    {"fix": "Average: 'natural proportions'; Extreme: name the exaggerated feature explicitly with scale words"},
+    "lookalike_risk":   {"fix": "Change 2+ facial anchors (nose, brows, face shape) and re-run; never mention real names"},
+    "stereotype_risk":  {"fix": "Remove ethnicity-linked jokes; keep humour in styling/posture/attitude"},
+    "text_artifacts":   {"fix": "Keep 'text, watermark, logo' in negative; no labels in sheet"},
+    "model_refused":    {"fix": "Remove sensitive words, switch provider, report real error"}
+  }
+}

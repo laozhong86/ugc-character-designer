@@ -1,0 +1,38 @@
+{
+  "slug": "",
+  "name": "",
+  "created_at": "",
+  "bio": [
+    "who they are",
+    "what they do",
+    "what they'd have an opinion about"
+  ],
+  "one_line_vibe": "",
+  "niche": "",
+  "platforms": [
+    "tiktok",
+    "instagram",
+    "youtube_shorts",
+    "x"
+  ],
+  "tier": "freak",
+  "selection": {},
+  "signature": {
+    "hair": "",
+    "standout_feature": "",
+    "outfit": "",
+    "prop": "",
+    "expression": "deadpan"
+  },
+  "running_bit": "",
+  "motion_personality": "",
+  "palette": [],
+  "originality": {
+    "is_original": false,
+    "not_based_on": "no real person / celebrity / copyrighted character"
+  },
+  "drift_guard": [],
+  "locked_refs": [],
+  "status": "concept",
+  "character_paragraph": "(locked after S5: full CHARACTER paragraph, pasted verbatim into every later prompt)"
+}

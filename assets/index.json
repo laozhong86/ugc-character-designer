@@ -1,0 +1,4240 @@
+{
+ "_doc": "One record per element. Retrieve by key '<category>/<option_id>' (ugc_taxonomy.py get/query/find). Every image is a standalone file containing exactly one element; no composites.",
+ "version": 1,
+ "count": 170,
+ "tiers": {
+  "normal": {
+   "label": "Average",
+   "lead": "natural, realistic",
+   "image": {
+    "rel": "assets/options/tier/normal.webp",
+    "abs": "/Users/x/.omnimux-dev/.agent-presets/ugc-designer/skills/ugc-character-designer/assets/options/tier/normal.webp",
+    "bytes": 19954,
+    "kind": "reference_photo"
+   }
+  },
+  "freak": {
+   "label": "Bold",
+   "lead": "stylized, slightly exaggerated",
+   "image": {
+    "rel": "assets/options/tier/freak.webp",
+    "abs": "/Users/x/.omnimux-dev/.agent-presets/ugc-designer/skills/ugc-character-designer/assets/options/tier/freak.webp",
+    "bytes": 28202,
+    "kind": "reference_photo"
+   }
+  },
+  "total": {
+   "label": "Extreme",
+   "lead": "extreme caricature, very exaggerated proportions",
+   "image": {
+    "rel": "assets/options/tier/total.webp",
+    "abs": "/Users/x/.omnimux-dev/.agent-presets/ugc-designer/skills/ugc-character-designer/assets/options/tier/total.webp",
+    "bytes": 23062,
+    "kind": "reference_photo"
+   }
+  }
+ },
+ "options": {
+  "gender/female": {
+   "key": "gender/female",
+   "category": "gender",
+   "category_label": "Gender",
+   "kind": "media",
+   "max": 1,
+   "id": "female",
+   "label": "Female",
+   "fragment": "Female",
+   "look": "woman",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/gender/female.webp",
+    "bytes": 143370,
+    "kind": "reference_photo"
+   }
+  },
+  "gender/male": {
+   "key": "gender/male",
+   "category": "gender",
+   "category_label": "Gender",
+   "kind": "media",
+   "max": 1,
+   "id": "male",
+   "label": "Male",
+   "fragment": "Male",
+   "look": "man",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/gender/male.webp",
+    "bytes": 190576,
+    "kind": "reference_photo"
+   }
+  },
+  "gender/trans_man": {
+   "key": "gender/trans_man",
+   "category": "gender",
+   "category_label": "Gender",
+   "kind": "media",
+   "max": 1,
+   "id": "trans_man",
+   "label": "Trans man",
+   "fragment": "Trans man",
+   "look": "trans man",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/gender/trans_man.webp",
+    "bytes": 178930,
+    "kind": "reference_photo"
+   }
+  },
+  "gender/trans_woman": {
+   "key": "gender/trans_woman",
+   "category": "gender",
+   "category_label": "Gender",
+   "kind": "media",
+   "max": 1,
+   "id": "trans_woman",
+   "label": "Trans woman",
+   "fragment": "Trans woman",
+   "look": "trans woman",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/gender/trans_woman.webp",
+    "bytes": 178930,
+    "kind": "reference_photo"
+   }
+  },
+  "gender/non_binary": {
+   "key": "gender/non_binary",
+   "category": "gender",
+   "category_label": "Gender",
+   "kind": "media",
+   "max": 1,
+   "id": "non_binary",
+   "label": "Non-binary",
+   "fragment": "Non-binary person",
+   "look": "androgynous non-binary person",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/gender/non_binary.webp",
+    "bytes": 168840,
+    "kind": "reference_photo"
+   }
+  },
+  "ethnicity_origin_base/african": {
+   "key": "ethnicity_origin_base/african",
+   "category": "ethnicity_origin_base",
+   "category_label": "Ethnicity",
+   "kind": "media",
+   "max": 1,
+   "id": "african",
+   "label": "African",
+   "fragment": "African phenotype",
+   "look": "African facial features",
+   "card_styling": "towering flat-top hi-top fade, small round wire glasses, mustard turtleneck",
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/ethnicity_origin_base/african.webp",
+    "bytes": 12006,
+    "kind": "reference_photo"
+   }
+  },
+  "ethnicity_origin_base/east_asian": {
+   "key": "ethnicity_origin_base/east_asian",
+   "category": "ethnicity_origin_base",
+   "category_label": "Ethnicity",
+   "kind": "media",
+   "max": 1,
+   "id": "east_asian",
+   "label": "Asian",
+   "fragment": "East Asian supermodel, Korean K-Pop idol phenotype",
+   "look": "East Asian facial features, ordinary everyday face (not idol-like)",
+   "card_styling": "glossy jet-black blunt bob with a heavy straight fringe, white ruffled Victorian collar",
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/ethnicity_origin_base/east_asian.webp",
+    "bytes": 11602,
+    "kind": "reference_photo"
+   }
+  },
+  "ethnicity_origin_base/european": {
+   "key": "ethnicity_origin_base/european",
+   "category": "ethnicity_origin_base",
+   "category_label": "Ethnicity",
+   "kind": "media",
+   "max": 1,
+   "id": "european",
+   "label": "European",
+   "fragment": "European",
+   "look": "European facial features",
+   "card_styling": "flat side-parted dirty-blond hair, brown tweed suit and tie, long narrow face",
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/ethnicity_origin_base/european.webp",
+    "bytes": 26000,
+    "kind": "reference_photo"
+   }
+  },
+  "ethnicity_origin_base/indian": {
+   "key": "ethnicity_origin_base/indian",
+   "category": "ethnicity_origin_base",
+   "category_label": "Ethnicity",
+   "kind": "media",
+   "max": 1,
+   "id": "indian",
+   "label": "Indian",
+   "fragment": "Indian",
+   "look": "South Asian facial features",
+   "card_styling": "sleek top bun, oversized tinted 70s glasses, teal paisley pussy-bow blouse",
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/ethnicity_origin_base/indian.webp",
+    "bytes": 27190,
+    "kind": "reference_photo"
+   }
+  },
+  "ethnicity_origin_base/middle_eastern": {
+   "key": "ethnicity_origin_base/middle_eastern",
+   "category": "ethnicity_origin_base",
+   "category_label": "Ethnicity",
+   "kind": "media",
+   "max": 1,
+   "id": "middle_eastern",
+   "label": "Middle Eastern",
+   "fragment": "Middle Eastern",
+   "look": "Middle Eastern facial features, strong brows",
+   "card_styling": "tall glossy black curly pompadour, unibrow, pencil moustache, mint satin open-collar shirt",
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/ethnicity_origin_base/middle_eastern.webp",
+    "bytes": 14138,
+    "kind": "reference_photo"
+   }
+  },
+  "ethnicity_origin_base/latin_american": {
+   "key": "ethnicity_origin_base/latin_american",
+   "category": "ethnicity_origin_base",
+   "category_label": "Ethnicity",
+   "kind": "media",
+   "max": 1,
+   "id": "latin_american",
+   "label": "Mixed",
+   "fragment": "Mixed race, Latin American influence",
+   "look": "mixed-race Latin American facial features",
+   "card_styling": "high copper curly afro puff, tiny round glasses, striped retro knit polo",
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/ethnicity_origin_base/latin_american.webp",
+    "bytes": 20412,
+    "kind": "reference_photo"
+   }
+  },
+  "age/adult": {
+   "key": "age/adult",
+   "category": "age",
+   "category_label": "Age",
+   "kind": "text",
+   "max": 1,
+   "id": "adult",
+   "label": "Adult",
+   "fragment": "Adult",
+   "look": null,
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/age/adult.webp",
+    "bytes": 742,
+    "kind": "text_card"
+   }
+  },
+  "age/mature": {
+   "key": "age/mature",
+   "category": "age",
+   "category_label": "Age",
+   "kind": "text",
+   "max": 1,
+   "id": "mature",
+   "label": "Mature",
+   "fragment": "Middle-aged",
+   "look": null,
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/age/mature.webp",
+    "bytes": 1618,
+    "kind": "text_card"
+   }
+  },
+  "age/senior": {
+   "key": "age/senior",
+   "category": "age",
+   "category_label": "Age",
+   "kind": "text",
+   "max": 1,
+   "id": "senior",
+   "label": "Senior",
+   "fragment": "Senior",
+   "look": null,
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/age/senior.webp",
+    "bytes": 898,
+    "kind": "text_card"
+   }
+  },
+  "skin_tone/st_porcelain": {
+   "key": "skin_tone/st_porcelain",
+   "category": "skin_tone",
+   "category_label": "Skin color",
+   "kind": "color",
+   "max": 1,
+   "id": "st_porcelain",
+   "label": "Porcelain",
+   "fragment": "porcelain skin",
+   "look": "porcelain pale skin",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": "#f1e2d5",
+   "image": {
+    "rel": "assets/options/skin_tone/st_porcelain.webp",
+    "bytes": 1298,
+    "kind": "color_swatch"
+   }
+  },
+  "skin_tone/st_fair": {
+   "key": "skin_tone/st_fair",
+   "category": "skin_tone",
+   "category_label": "Skin color",
+   "kind": "color",
+   "max": 1,
+   "id": "st_fair",
+   "label": "Fair",
+   "fragment": "fair skin",
+   "look": "fair skin",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": "#e8c9b5",
+   "image": {
+    "rel": "assets/options/skin_tone/st_fair.webp",
+    "bytes": 1112,
+    "kind": "color_swatch"
+   }
+  },
+  "skin_tone/st_light": {
+   "key": "skin_tone/st_light",
+   "category": "skin_tone",
+   "category_label": "Skin color",
+   "kind": "color",
+   "max": 1,
+   "id": "st_light",
+   "label": "Light",
+   "fragment": "light skin",
+   "look": "light skin",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": "#dab49a",
+   "image": {
+    "rel": "assets/options/skin_tone/st_light.webp",
+    "bytes": 1200,
+    "kind": "color_swatch"
+   }
+  },
+  "skin_tone/st_olive": {
+   "key": "skin_tone/st_olive",
+   "category": "skin_tone",
+   "category_label": "Skin color",
+   "kind": "color",
+   "max": 1,
+   "id": "st_olive",
+   "label": "Olive",
+   "fragment": "olive skin",
+   "look": "olive skin",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": "#b6976e",
+   "image": {
+    "rel": "assets/options/skin_tone/st_olive.webp",
+    "bytes": 1176,
+    "kind": "color_swatch"
+   }
+  },
+  "skin_tone/st_tan": {
+   "key": "skin_tone/st_tan",
+   "category": "skin_tone",
+   "category_label": "Skin color",
+   "kind": "color",
+   "max": 1,
+   "id": "st_tan",
+   "label": "Tan",
+   "fragment": "tan skin",
+   "look": "tan skin",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": "#bc8e67",
+   "image": {
+    "rel": "assets/options/skin_tone/st_tan.webp",
+    "bytes": 1092,
+    "kind": "color_swatch"
+   }
+  },
+  "skin_tone/st_brown": {
+   "key": "skin_tone/st_brown",
+   "category": "skin_tone",
+   "category_label": "Skin color",
+   "kind": "color",
+   "max": 1,
+   "id": "st_brown",
+   "label": "Brown",
+   "fragment": "brown skin",
+   "look": "brown skin",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": "#805135",
+   "image": {
+    "rel": "assets/options/skin_tone/st_brown.webp",
+    "bytes": 1266,
+    "kind": "color_swatch"
+   }
+  },
+  "skin_tone/st_deep": {
+   "key": "skin_tone/st_deep",
+   "category": "skin_tone",
+   "category_label": "Skin color",
+   "kind": "color",
+   "max": 1,
+   "id": "st_deep",
+   "label": "Deep brown",
+   "fragment": "deep brown skin",
+   "look": "deep brown skin",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": "#543621",
+   "image": {
+    "rel": "assets/options/skin_tone/st_deep.webp",
+    "bytes": 1560,
+    "kind": "color_swatch"
+   }
+  },
+  "skin_tone/st_ebony": {
+   "key": "skin_tone/st_ebony",
+   "category": "skin_tone",
+   "category_label": "Skin color",
+   "kind": "color",
+   "max": 1,
+   "id": "st_ebony",
+   "label": "Ebony",
+   "fragment": "ebony skin",
+   "look": "dark ebony skin",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": "#2d211b",
+   "image": {
+    "rel": "assets/options/skin_tone/st_ebony.webp",
+    "bytes": 1110,
+    "kind": "color_swatch"
+   }
+  },
+  "height/h_average": {
+   "key": "height/h_average",
+   "category": "height",
+   "category_label": "Height",
+   "kind": "media",
+   "max": 1,
+   "id": "h_average",
+   "label": "Average",
+   "fragment": "average height",
+   "look": "average height",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/height/h_average.webp",
+    "bytes": 6214,
+    "kind": "reference_photo"
+   }
+  },
+  "height/h_tall": {
+   "key": "height/h_tall",
+   "category": "height",
+   "category_label": "Height",
+   "kind": "media",
+   "max": 1,
+   "id": "h_tall",
+   "label": "Tall",
+   "fragment": "tall",
+   "look": "tall, long-legged",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/height/h_tall.webp",
+    "bytes": 6688,
+    "kind": "reference_photo"
+   }
+  },
+  "height/h_very_tall": {
+   "key": "height/h_very_tall",
+   "category": "height",
+   "category_label": "Height",
+   "kind": "media",
+   "max": 1,
+   "id": "h_very_tall",
+   "label": "Very tall",
+   "fragment": "very tall",
+   "look": "extremely tall and towering, head near the top of the frame",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/height/h_very_tall.webp",
+    "bytes": 9124,
+    "kind": "reference_photo"
+   }
+  },
+  "body_type/body_slim": {
+   "key": "body_type/body_slim",
+   "category": "body_type",
+   "category_label": "Build",
+   "kind": "media",
+   "max": 1,
+   "id": "body_slim",
+   "label": "Slim",
+   "fragment": "slim build",
+   "look": "very thin narrow frame",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/body_type/body_slim.webp",
+    "bytes": 4756,
+    "kind": "reference_photo"
+   }
+  },
+  "body_type/body_athletic": {
+   "key": "body_type/body_athletic",
+   "category": "body_type",
+   "category_label": "Build",
+   "kind": "media",
+   "max": 1,
+   "id": "body_athletic",
+   "label": "Athletic",
+   "fragment": "athletic build",
+   "look": "lean athletic frame",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/body_type/body_athletic.webp",
+    "bytes": 7144,
+    "kind": "reference_photo"
+   }
+  },
+  "body_type/body_muscular": {
+   "key": "body_type/body_muscular",
+   "category": "body_type",
+   "category_label": "Build",
+   "kind": "media",
+   "max": 1,
+   "id": "body_muscular",
+   "label": "Muscular",
+   "fragment": "muscular build",
+   "look": "broad muscular frame, thick arms and chest",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/body_type/body_muscular.webp",
+    "bytes": 7366,
+    "kind": "reference_photo"
+   }
+  },
+  "body_type/body_curvy": {
+   "key": "body_type/body_curvy",
+   "category": "body_type",
+   "category_label": "Build",
+   "kind": "media",
+   "max": 1,
+   "id": "body_curvy",
+   "label": "Curvy",
+   "fragment": "curvy build",
+   "look": "hourglass curvy figure",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/body_type/body_curvy.webp",
+    "bytes": 10534,
+    "kind": "reference_photo"
+   }
+  },
+  "body_type/body_heavy": {
+   "key": "body_type/body_heavy",
+   "category": "body_type",
+   "category_label": "Build",
+   "kind": "media",
+   "max": 1,
+   "id": "body_heavy",
+   "label": "Heavy",
+   "fragment": "heavy build",
+   "look": "heavy round build with a large belly",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/body_type/body_heavy.webp",
+    "bytes": 8284,
+    "kind": "reference_photo"
+   }
+  },
+  "body_type/body_ultra": {
+   "key": "body_type/body_ultra",
+   "category": "body_type",
+   "category_label": "Build",
+   "kind": "media",
+   "max": 1,
+   "id": "body_ultra",
+   "label": "Ultra Muscular",
+   "fragment": "extreme muscular build",
+   "look": "absurdly hyper-muscular bodybuilder torso and arms on an ordinary head",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/body_type/body_ultra.webp",
+    "bytes": 9392,
+    "kind": "reference_photo"
+   }
+  },
+  "proportions/pr_longlimbs": {
+   "key": "proportions/pr_longlimbs",
+   "category": "proportions",
+   "category_label": "Proportions",
+   "kind": "media",
+   "max": 2,
+   "id": "pr_longlimbs",
+   "label": "Long limbs",
+   "fragment": "long limbs",
+   "look": "extra-long legs and arms",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/proportions/pr_longlimbs.webp",
+    "bytes": 4554,
+    "kind": "reference_photo"
+   }
+  },
+  "proportions/pr_shortlegs": {
+   "key": "proportions/pr_shortlegs",
+   "category": "proportions",
+   "category_label": "Proportions",
+   "kind": "media",
+   "max": 2,
+   "id": "pr_shortlegs",
+   "label": "Short legs",
+   "fragment": "short legs",
+   "look": "noticeably short legs, long torso",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/proportions/pr_shortlegs.webp",
+    "bytes": 7620,
+    "kind": "reference_photo"
+   }
+  },
+  "proportions/pr_shoulders": {
+   "key": "proportions/pr_shoulders",
+   "category": "proportions",
+   "category_label": "Proportions",
+   "kind": "media",
+   "max": 2,
+   "id": "pr_shoulders",
+   "label": "Broad shoulders",
+   "fragment": "broad shoulders",
+   "look": "very broad shoulders",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/proportions/pr_shoulders.webp",
+    "bytes": 7574,
+    "kind": "reference_photo"
+   }
+  },
+  "proportions/pr_waist": {
+   "key": "proportions/pr_waist",
+   "category": "proportions",
+   "category_label": "Proportions",
+   "kind": "media",
+   "max": 2,
+   "id": "pr_waist",
+   "label": "Tiny waist",
+   "fragment": "tiny waist",
+   "look": "tiny cinched waist",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/proportions/pr_waist.webp",
+    "bytes": 7502,
+    "kind": "reference_photo"
+   }
+  },
+  "proportions/pr_egg": {
+   "key": "proportions/pr_egg",
+   "category": "proportions",
+   "category_label": "Proportions",
+   "kind": "media",
+   "max": 2,
+   "id": "pr_egg",
+   "label": "Egg body",
+   "fragment": "egg-shaped body",
+   "look": "egg-shaped body: wide round hips and balloon trousers tapering to skinny ankles",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/proportions/pr_egg.webp",
+    "bytes": 8278,
+    "kind": "reference_photo"
+   }
+  },
+  "proportions/pr_potbelly": {
+   "key": "proportions/pr_potbelly",
+   "category": "proportions",
+   "category_label": "Proportions",
+   "kind": "media",
+   "max": 2,
+   "id": "pr_potbelly",
+   "label": "Pot belly",
+   "fragment": "pot belly",
+   "look": "round pot belly pushing out a buttoned waistcoat",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/proportions/pr_potbelly.webp",
+    "bytes": 7576,
+    "kind": "reference_photo"
+   }
+  },
+  "freak_head/head_oval": {
+   "key": "freak_head/head_oval",
+   "category": "freak_head",
+   "category_label": "Head shape",
+   "kind": "media",
+   "max": 1,
+   "id": "head_oval",
+   "label": "Standard",
+   "fragment": "oval face",
+   "look": "balanced oval face",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/freak_head/head_oval.webp",
+    "bytes": 9736,
+    "kind": "reference_photo"
+   }
+  },
+  "freak_head/head_long": {
+   "key": "freak_head/head_long",
+   "category": "freak_head",
+   "category_label": "Head shape",
+   "kind": "media",
+   "max": 1,
+   "id": "head_long",
+   "label": "Long",
+   "fragment": "long face",
+   "look": "long elongated face",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/freak_head/head_long.webp",
+    "bytes": 11292,
+    "kind": "reference_photo"
+   }
+  },
+  "freak_head/head_tiny": {
+   "key": "freak_head/head_tiny",
+   "category": "freak_head",
+   "category_label": "Head shape",
+   "kind": "media",
+   "max": 1,
+   "id": "head_tiny",
+   "label": "Tiny",
+   "fragment": "tiny head",
+   "look": "comically tiny head on a normal-sized body",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/freak_head/head_tiny.webp",
+    "bytes": 12156,
+    "kind": "reference_photo"
+   }
+  },
+  "freak_head/head_forehead": {
+   "key": "freak_head/head_forehead",
+   "category": "freak_head",
+   "category_label": "Head shape",
+   "kind": "media",
+   "max": 1,
+   "id": "head_forehead",
+   "label": "High forehead",
+   "fragment": "high forehead",
+   "look": "very high domed forehead",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/freak_head/head_forehead.webp",
+    "bytes": 9028,
+    "kind": "reference_photo"
+   }
+  },
+  "freak_head/head_ancient": {
+   "key": "freak_head/head_ancient",
+   "category": "freak_head",
+   "category_label": "Head shape",
+   "kind": "media",
+   "max": 1,
+   "id": "head_ancient",
+   "label": "Caveman",
+   "fragment": "caveman-like head",
+   "look": "heavy caveman-like brow ridge and broad flat nose",
+   "card_styling": null,
+   "tiers": [
+    "total"
+   ],
+   "bold_only": true,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/freak_head/head_ancient.webp",
+    "bytes": 24482,
+    "kind": "reference_photo"
+   }
+  },
+  "freak_head/head_herojaw": {
+   "key": "freak_head/head_herojaw",
+   "category": "freak_head",
+   "category_label": "Head shape",
+   "kind": "media",
+   "max": 1,
+   "id": "head_herojaw",
+   "label": "Gigachad",
+   "fragment": "sharp heroic jawline",
+   "look": "massively wide chiseled comic-hero jaw",
+   "card_styling": null,
+   "tiers": [
+    "total"
+   ],
+   "bold_only": true,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/freak_head/head_herojaw.webp",
+    "bytes": 14442,
+    "kind": "reference_photo"
+   }
+  },
+  "freak_head/head_megachin": {
+   "key": "freak_head/head_megachin",
+   "category": "freak_head",
+   "category_label": "Head shape",
+   "kind": "media",
+   "max": 1,
+   "id": "head_megachin",
+   "label": "Mega jaw",
+   "fragment": "oversized chin",
+   "look": "huge oversized chin and jowls",
+   "card_styling": null,
+   "tiers": [
+    "total"
+   ],
+   "bold_only": true,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/freak_head/head_megachin.webp",
+    "bytes": 12952,
+    "kind": "reference_photo"
+   }
+  },
+  "freak_head/head_round": {
+   "key": "freak_head/head_round",
+   "category": "freak_head",
+   "category_label": "Head shape",
+   "kind": "media",
+   "max": 1,
+   "id": "head_round",
+   "label": "Round",
+   "fragment": "round face",
+   "look": "round chubby face",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/freak_head/head_round.webp",
+    "bytes": 17908,
+    "kind": "reference_photo"
+   }
+  },
+  "freak_head/head_square": {
+   "key": "freak_head/head_square",
+   "category": "freak_head",
+   "category_label": "Head shape",
+   "kind": "media",
+   "max": 1,
+   "id": "head_square",
+   "label": "Square",
+   "fragment": "square face",
+   "look": "blocky square face and jaw",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/freak_head/head_square.webp",
+    "bytes": 11750,
+    "kind": "reference_photo"
+   }
+  },
+  "freak_head/head_heart": {
+   "key": "freak_head/head_heart",
+   "category": "freak_head",
+   "category_label": "Head shape",
+   "kind": "media",
+   "max": 1,
+   "id": "head_heart",
+   "label": "Heart",
+   "fragment": "heart-shaped face",
+   "look": "heart-shaped face with a pointed chin",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/freak_head/head_heart.webp",
+    "bytes": 13446,
+    "kind": "reference_photo"
+   }
+  },
+  "freak_neck/neck_normal": {
+   "key": "freak_neck/neck_normal",
+   "category": "freak_neck",
+   "category_label": "Neck",
+   "kind": "media",
+   "max": 1,
+   "id": "neck_normal",
+   "label": "Standard",
+   "fragment": "normal neck",
+   "look": "normal neck",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/freak_neck/neck_normal.webp",
+    "bytes": 14456,
+    "kind": "reference_photo"
+   }
+  },
+  "freak_neck/neck_column": {
+   "key": "freak_neck/neck_column",
+   "category": "freak_neck",
+   "category_label": "Neck",
+   "kind": "media",
+   "max": 1,
+   "id": "neck_column",
+   "label": "Column",
+   "fragment": "column-like neck",
+   "look": "thick column-like neck as wide as the head",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/freak_neck/neck_column.webp",
+    "bytes": 12300,
+    "kind": "reference_photo"
+   }
+  },
+  "freak_neck/neck_long": {
+   "key": "freak_neck/neck_long",
+   "category": "freak_neck",
+   "category_label": "Neck",
+   "kind": "media",
+   "max": 1,
+   "id": "neck_long",
+   "label": "Long",
+   "fragment": "long neck",
+   "look": "conspicuously long swan-like neck",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/freak_neck/neck_long.webp",
+    "bytes": 10808,
+    "kind": "reference_photo"
+   }
+  },
+  "freak_neck/neck_short": {
+   "key": "freak_neck/neck_short",
+   "category": "freak_neck",
+   "category_label": "Neck",
+   "kind": "media",
+   "max": 1,
+   "id": "neck_short",
+   "label": "Short",
+   "fragment": "short neck",
+   "look": "very short neck, head sitting low on the shoulders",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/freak_neck/neck_short.webp",
+    "bytes": 16282,
+    "kind": "reference_photo"
+   }
+  },
+  "eye_shape/es_almond": {
+   "key": "eye_shape/es_almond",
+   "category": "eye_shape",
+   "category_label": "Eye shape",
+   "kind": "media",
+   "max": 1,
+   "id": "es_almond",
+   "label": "Almond",
+   "fragment": "almond eyes",
+   "look": "almond-shaped eyes",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/eye_shape/es_almond.webp",
+    "bytes": 21282,
+    "kind": "reference_photo"
+   }
+  },
+  "eye_shape/es_round": {
+   "key": "eye_shape/es_round",
+   "category": "eye_shape",
+   "category_label": "Eye shape",
+   "kind": "media",
+   "max": 1,
+   "id": "es_round",
+   "label": "Round",
+   "fragment": "round eyes",
+   "look": "round open eyes",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/eye_shape/es_round.webp",
+    "bytes": 23240,
+    "kind": "reference_photo"
+   }
+  },
+  "eye_shape/es_monolid": {
+   "key": "eye_shape/es_monolid",
+   "category": "eye_shape",
+   "category_label": "Eye shape",
+   "kind": "media",
+   "max": 1,
+   "id": "es_monolid",
+   "label": "Monolid",
+   "fragment": "monolid eyes",
+   "look": "monolid eyes",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/eye_shape/es_monolid.webp",
+    "bytes": 20542,
+    "kind": "reference_photo"
+   }
+  },
+  "eye_shape/es_close": {
+   "key": "eye_shape/es_close",
+   "category": "eye_shape",
+   "category_label": "Eye shape",
+   "kind": "media",
+   "max": 1,
+   "id": "es_close",
+   "label": "Close-set",
+   "fragment": "close-set eyes",
+   "look": "close-set eyes",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/eye_shape/es_close.webp",
+    "bytes": 18546,
+    "kind": "reference_photo"
+   }
+  },
+  "eye_shape/es_wide": {
+   "key": "eye_shape/es_wide",
+   "category": "eye_shape",
+   "category_label": "Eye shape",
+   "kind": "media",
+   "max": 1,
+   "id": "es_wide",
+   "label": "Wide-set",
+   "fragment": "wide-set eyes",
+   "look": "very wide-set eyes",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/eye_shape/es_wide.webp",
+    "bytes": 17852,
+    "kind": "reference_photo"
+   }
+  },
+  "eye_shape/es_uneven": {
+   "key": "eye_shape/es_uneven",
+   "category": "eye_shape",
+   "category_label": "Eye shape",
+   "kind": "media",
+   "max": 1,
+   "id": "es_uneven",
+   "label": "Uneven",
+   "fragment": "uneven eyes",
+   "look": "slightly uneven eyes, one smaller",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/eye_shape/es_uneven.webp",
+    "bytes": 22686,
+    "kind": "reference_photo"
+   }
+  },
+  "eye_shape/es_large": {
+   "key": "eye_shape/es_large",
+   "category": "eye_shape",
+   "category_label": "Eye shape",
+   "kind": "media",
+   "max": 1,
+   "id": "es_large",
+   "label": "Large",
+   "fragment": "large eyes",
+   "look": "large bright eyes",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/eye_shape/es_large.webp",
+    "bytes": 26402,
+    "kind": "reference_photo"
+   }
+  },
+  "eye_shape/es_huge": {
+   "key": "eye_shape/es_huge",
+   "category": "eye_shape",
+   "category_label": "Eye shape",
+   "kind": "media",
+   "max": 1,
+   "id": "es_huge",
+   "label": "Huge",
+   "fragment": "huge eyes",
+   "look": "enormous cartoonishly huge eyes with giant irises",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/eye_shape/es_huge.webp",
+    "bytes": 24314,
+    "kind": "reference_photo"
+   }
+  },
+  "eye_shape/es_hooded": {
+   "key": "eye_shape/es_hooded",
+   "category": "eye_shape",
+   "category_label": "Eye shape",
+   "kind": "media",
+   "max": 1,
+   "id": "es_hooded",
+   "label": "Hooded",
+   "fragment": "hooded eyes",
+   "look": "hooded eyes",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/eye_shape/es_hooded.webp",
+    "bytes": 25318,
+    "kind": "reference_photo"
+   }
+  },
+  "eye_shape/es_upturned": {
+   "key": "eye_shape/es_upturned",
+   "category": "eye_shape",
+   "category_label": "Eye shape",
+   "kind": "media",
+   "max": 1,
+   "id": "es_upturned",
+   "label": "Upturned",
+   "fragment": "upturned eyes",
+   "look": "upturned cat-like eyes",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/eye_shape/es_upturned.webp",
+    "bytes": 23876,
+    "kind": "reference_photo"
+   }
+  },
+  "eye_shape/es_downturned": {
+   "key": "eye_shape/es_downturned",
+   "category": "eye_shape",
+   "category_label": "Eye shape",
+   "kind": "media",
+   "max": 1,
+   "id": "es_downturned",
+   "label": "Downturned",
+   "fragment": "downturned eyes",
+   "look": "droopy downturned eyes",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/eye_shape/es_downturned.webp",
+    "bytes": 21160,
+    "kind": "reference_photo"
+   }
+  },
+  "eye_color/eye_black": {
+   "key": "eye_color/eye_black",
+   "category": "eye_color",
+   "category_label": "Eye color",
+   "kind": "color",
+   "max": 1,
+   "id": "eye_black",
+   "label": "Black",
+   "fragment": "black eyes",
+   "look": null,
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": "#191615",
+   "image": {
+    "rel": "assets/options/eye_color/eye_black.webp",
+    "bytes": 1108,
+    "kind": "color_swatch"
+   }
+  },
+  "eye_color/eye_brown": {
+   "key": "eye_color/eye_brown",
+   "category": "eye_color",
+   "category_label": "Eye color",
+   "kind": "color",
+   "max": 1,
+   "id": "eye_brown",
+   "label": "Brown",
+   "fragment": "brown eyes",
+   "look": null,
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": "#67432c",
+   "image": {
+    "rel": "assets/options/eye_color/eye_brown.webp",
+    "bytes": 1230,
+    "kind": "color_swatch"
+   }
+  },
+  "eye_color/eye_hazel": {
+   "key": "eye_color/eye_hazel",
+   "category": "eye_color",
+   "category_label": "Eye color",
+   "kind": "color",
+   "max": 1,
+   "id": "eye_hazel",
+   "label": "Hazel",
+   "fragment": "hazel eyes",
+   "look": null,
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": "#887546",
+   "image": {
+    "rel": "assets/options/eye_color/eye_hazel.webp",
+    "bytes": 1090,
+    "kind": "color_swatch"
+   }
+  },
+  "eye_color/eye_green": {
+   "key": "eye_color/eye_green",
+   "category": "eye_color",
+   "category_label": "Eye color",
+   "kind": "color",
+   "max": 1,
+   "id": "eye_green",
+   "label": "Green",
+   "fragment": "green eyes",
+   "look": null,
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": "#648254",
+   "image": {
+    "rel": "assets/options/eye_color/eye_green.webp",
+    "bytes": 1110,
+    "kind": "color_swatch"
+   }
+  },
+  "eye_color/eye_blue": {
+   "key": "eye_color/eye_blue",
+   "category": "eye_color",
+   "category_label": "Eye color",
+   "kind": "color",
+   "max": 1,
+   "id": "eye_blue",
+   "label": "Blue",
+   "fragment": "blue eyes",
+   "look": null,
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": "#5182a1",
+   "image": {
+    "rel": "assets/options/eye_color/eye_blue.webp",
+    "bytes": 1054,
+    "kind": "color_swatch"
+   }
+  },
+  "eye_color/eye_ice_blue": {
+   "key": "eye_color/eye_ice_blue",
+   "category": "eye_color",
+   "category_label": "Eye color",
+   "kind": "color",
+   "max": 1,
+   "id": "eye_ice_blue",
+   "label": "Ice blue",
+   "fragment": "ice blue eyes",
+   "look": null,
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": "#a5cbd6",
+   "image": {
+    "rel": "assets/options/eye_color/eye_ice_blue.webp",
+    "bytes": 1280,
+    "kind": "color_swatch"
+   }
+  },
+  "eye_color/eye_amber": {
+   "key": "eye_color/eye_amber",
+   "category": "eye_color",
+   "category_label": "Eye color",
+   "kind": "color",
+   "max": 1,
+   "id": "eye_amber",
+   "label": "Amber",
+   "fragment": "amber eyes",
+   "look": null,
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": "#bd8c45",
+   "image": {
+    "rel": "assets/options/eye_color/eye_amber.webp",
+    "bytes": 1288,
+    "kind": "color_swatch"
+   }
+  },
+  "eye_color/eye_grey": {
+   "key": "eye_color/eye_grey",
+   "category": "eye_color",
+   "category_label": "Eye color",
+   "kind": "color",
+   "max": 1,
+   "id": "eye_grey",
+   "label": "Grey",
+   "fragment": "grey eyes",
+   "look": null,
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": "#939b9d",
+   "image": {
+    "rel": "assets/options/eye_color/eye_grey.webp",
+    "bytes": 1018,
+    "kind": "color_swatch"
+   }
+  },
+  "freak_face/fn_freckles": {
+   "key": "freak_face/fn_freckles",
+   "category": "freak_face",
+   "category_label": "Features",
+   "kind": "media",
+   "max": 4,
+   "id": "fn_freckles",
+   "label": "Freckles",
+   "fragment": "freckles",
+   "look": "dense freckles across nose and cheeks",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": "marks",
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/freak_face/fn_freckles.webp",
+    "bytes": 32448,
+    "kind": "reference_photo"
+   }
+  },
+  "freak_face/fn_dimples": {
+   "key": "freak_face/fn_dimples",
+   "category": "freak_face",
+   "category_label": "Features",
+   "kind": "media",
+   "max": 4,
+   "id": "fn_dimples",
+   "label": "Dimples",
+   "fragment": "dimples",
+   "look": "deep cheek dimples",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": "cheeks",
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/freak_face/fn_dimples.webp",
+    "bytes": 20484,
+    "kind": "reference_photo"
+   }
+  },
+  "freak_face/fn_eyebags": {
+   "key": "freak_face/fn_eyebags",
+   "category": "freak_face",
+   "category_label": "Features",
+   "kind": "media",
+   "max": 4,
+   "id": "fn_eyebags",
+   "label": "Heavy eye bags",
+   "fragment": "heavy eye bags",
+   "look": "heavy dark under-eye bags",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": "eyes",
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/freak_face/fn_eyebags.webp",
+    "bytes": 26990,
+    "kind": "reference_photo"
+   }
+  },
+  "freak_face/ff_marks_12": {
+   "key": "freak_face/ff_marks_12",
+   "category": "freak_face",
+   "category_label": "Features",
+   "kind": "media",
+   "max": 4,
+   "id": "ff_marks_12",
+   "label": "Blush",
+   "fragment": "rosy blush",
+   "look": "round doll-like pink blush circles on the cheeks",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": "marks",
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/freak_face/ff_marks_12.webp",
+    "bytes": 25326,
+    "kind": "reference_photo"
+   }
+  },
+  "freak_face/fn_cheekbones": {
+   "key": "freak_face/fn_cheekbones",
+   "category": "freak_face",
+   "category_label": "Features",
+   "kind": "media",
+   "max": 4,
+   "id": "fn_cheekbones",
+   "label": "High cheekbones",
+   "fragment": "high cheekbones",
+   "look": "razor-sharp hollow cheekbones",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": "cheeks",
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/freak_face/fn_cheekbones.webp",
+    "bytes": 20494,
+    "kind": "reference_photo"
+   }
+  },
+  "freak_face/fn_fulllips": {
+   "key": "freak_face/fn_fulllips",
+   "category": "freak_face",
+   "category_label": "Features",
+   "kind": "media",
+   "max": 4,
+   "id": "fn_fulllips",
+   "label": "Full lips",
+   "fragment": "full lips",
+   "look": "very full glossy lips",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": "lips",
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/freak_face/fn_fulllips.webp",
+    "bytes": 30278,
+    "kind": "reference_photo"
+   }
+  },
+  "freak_face/fn_thickbrows": {
+   "key": "freak_face/fn_thickbrows",
+   "category": "freak_face",
+   "category_label": "Features",
+   "kind": "media",
+   "max": 4,
+   "id": "fn_thickbrows",
+   "label": "Thick brows",
+   "fragment": "thick eyebrows",
+   "look": "thick bushy dark eyebrows",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": "brows",
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/freak_face/fn_thickbrows.webp",
+    "bytes": 25262,
+    "kind": "reference_photo"
+   }
+  },
+  "freak_face/fn_mole": {
+   "key": "freak_face/fn_mole",
+   "category": "freak_face",
+   "category_label": "Features",
+   "kind": "media",
+   "max": 4,
+   "id": "fn_mole",
+   "label": "Beauty mark",
+   "fragment": "beauty mark",
+   "look": "small dark beauty mark above the lip",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": "marks",
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/freak_face/fn_mole.webp",
+    "bytes": 32692,
+    "kind": "reference_photo"
+   }
+  },
+  "freak_face/ff_nose_0": {
+   "key": "freak_face/ff_nose_0",
+   "category": "freak_face",
+   "category_label": "Features",
+   "kind": "media",
+   "max": 4,
+   "id": "ff_nose_0",
+   "label": "Potato nose",
+   "fragment": "potato nose",
+   "look": "big bulbous red potato nose",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": "nose",
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/freak_face/ff_nose_0.webp",
+    "bytes": 29386,
+    "kind": "reference_photo"
+   }
+  },
+  "freak_face/ff_nose_1": {
+   "key": "freak_face/ff_nose_1",
+   "category": "freak_face",
+   "category_label": "Features",
+   "kind": "media",
+   "max": 4,
+   "id": "ff_nose_1",
+   "label": "Button nose",
+   "fragment": "button nose",
+   "look": "small upturned button nose",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": "nose",
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/freak_face/ff_nose_1.webp",
+    "bytes": 21858,
+    "kind": "reference_photo"
+   }
+  },
+  "freak_face/ff_nose_2": {
+   "key": "freak_face/ff_nose_2",
+   "category": "freak_face",
+   "category_label": "Features",
+   "kind": "media",
+   "max": 4,
+   "id": "ff_nose_2",
+   "label": "Long pointy nose",
+   "fragment": "long pointy nose",
+   "look": "long sharp pointy nose",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": "nose",
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/freak_face/ff_nose_2.webp",
+    "bytes": 20808,
+    "kind": "reference_photo"
+   }
+  },
+  "freak_face/fn_tinynose": {
+   "key": "freak_face/fn_tinynose",
+   "category": "freak_face",
+   "category_label": "Features",
+   "kind": "media",
+   "max": 4,
+   "id": "fn_tinynose",
+   "label": "Tiny nose",
+   "fragment": "tiny nose",
+   "look": "tiny delicate nose",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": "nose",
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/freak_face/fn_tinynose.webp",
+    "bytes": 23660,
+    "kind": "reference_photo"
+   }
+  },
+  "freak_face/ff_lips_3": {
+   "key": "freak_face/ff_lips_3",
+   "category": "freak_face",
+   "category_label": "Features",
+   "kind": "media",
+   "max": 4,
+   "id": "ff_lips_3",
+   "label": "Pouty lips",
+   "fragment": "pouty lips",
+   "look": "exaggerated pouty puckered lips",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": "lips",
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/freak_face/ff_lips_3.webp",
+    "bytes": 24260,
+    "kind": "reference_photo"
+   }
+  },
+  "freak_face/ff_lips_4": {
+   "key": "freak_face/ff_lips_4",
+   "category": "freak_face",
+   "category_label": "Features",
+   "kind": "media",
+   "max": 4,
+   "id": "ff_lips_4",
+   "label": "Tiny pursed mouth",
+   "fragment": "tiny pursed mouth",
+   "look": "tiny pursed little mouth",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": "lips",
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/freak_face/ff_lips_4.webp",
+    "bytes": 20852,
+    "kind": "reference_photo"
+   }
+  },
+  "freak_face/fn_widemouth": {
+   "key": "freak_face/fn_widemouth",
+   "category": "freak_face",
+   "category_label": "Features",
+   "kind": "media",
+   "max": 4,
+   "id": "fn_widemouth",
+   "label": "Wide mouth",
+   "fragment": "wide mouth",
+   "look": "very wide thin mouth",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": "lips",
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/freak_face/fn_widemouth.webp",
+    "bytes": 18876,
+    "kind": "reference_photo"
+   }
+  },
+  "freak_face/ff_brows_5": {
+   "key": "freak_face/ff_brows_5",
+   "category": "freak_face",
+   "category_label": "Features",
+   "kind": "media",
+   "max": 4,
+   "id": "ff_brows_5",
+   "label": "Unibrow",
+   "fragment": "unibrow",
+   "look": "thick dark unibrow",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": "brows",
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/freak_face/ff_brows_5.webp",
+    "bytes": 21410,
+    "kind": "reference_photo"
+   }
+  },
+  "freak_face/ff_brows_6": {
+   "key": "freak_face/ff_brows_6",
+   "category": "freak_face",
+   "category_label": "Features",
+   "kind": "media",
+   "max": 4,
+   "id": "ff_brows_6",
+   "label": "Thin high brows",
+   "fragment": "thin high brows",
+   "look": "pencil-thin highly arched 1920s brows",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": "brows",
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/freak_face/ff_brows_6.webp",
+    "bytes": 25572,
+    "kind": "reference_photo"
+   }
+  },
+  "freak_face/ff_brows_7": {
+   "key": "freak_face/ff_brows_7",
+   "category": "freak_face",
+   "category_label": "Features",
+   "kind": "media",
+   "max": 4,
+   "id": "ff_brows_7",
+   "label": "Brush brows",
+   "fragment": "brush brows",
+   "look": "wild bushy upward-brushed brows",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": "brows",
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/freak_face/ff_brows_7.webp",
+    "bytes": 18230,
+    "kind": "reference_photo"
+   }
+  },
+  "freak_face/ff_ears_8": {
+   "key": "freak_face/ff_ears_8",
+   "category": "freak_face",
+   "category_label": "Features",
+   "kind": "media",
+   "max": 4,
+   "id": "ff_ears_8",
+   "label": "Jug ears",
+   "fragment": "jug ears",
+   "look": "big protruding jug ears",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": "ears",
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/freak_face/ff_ears_8.webp",
+    "bytes": 20578,
+    "kind": "reference_photo"
+   }
+  },
+  "freak_face/ff_ears_9": {
+   "key": "freak_face/ff_ears_9",
+   "category": "freak_face",
+   "category_label": "Features",
+   "kind": "media",
+   "max": 4,
+   "id": "ff_ears_9",
+   "label": "Uneven ears",
+   "fragment": "uneven ears",
+   "look": "mismatched uneven ears",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": "ears",
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/freak_face/ff_ears_9.webp",
+    "bytes": 19304,
+    "kind": "reference_photo"
+   }
+  },
+  "freak_face/ff_teeth_10": {
+   "key": "freak_face/ff_teeth_10",
+   "category": "freak_face",
+   "category_label": "Features",
+   "kind": "media",
+   "max": 4,
+   "id": "ff_teeth_10",
+   "label": "Gap teeth",
+   "fragment": "gap teeth",
+   "look": "wide gap between the front teeth",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": "teeth",
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/freak_face/ff_teeth_10.webp",
+    "bytes": 38752,
+    "kind": "reference_photo"
+   }
+  },
+  "freak_face/ff_teeth_11": {
+   "key": "freak_face/ff_teeth_11",
+   "category": "freak_face",
+   "category_label": "Features",
+   "kind": "media",
+   "max": 4,
+   "id": "ff_teeth_11",
+   "label": "Buck teeth",
+   "fragment": "buck teeth",
+   "look": "prominent buck teeth resting on the lower lip",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": "teeth",
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/freak_face/ff_teeth_11.webp",
+    "bytes": 22280,
+    "kind": "reference_photo"
+   }
+  },
+  "freak_face/fn_pointychin": {
+   "key": "freak_face/fn_pointychin",
+   "category": "freak_face",
+   "category_label": "Features",
+   "kind": "media",
+   "max": 4,
+   "id": "fn_pointychin",
+   "label": "Pointy chin",
+   "fragment": "pointy chin",
+   "look": "sharp pointed chin",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": "chin",
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/freak_face/fn_pointychin.webp",
+    "bytes": 22402,
+    "kind": "reference_photo"
+   }
+  },
+  "freak_face/ff_chin_13": {
+   "key": "freak_face/ff_chin_13",
+   "category": "freak_face",
+   "category_label": "Features",
+   "kind": "media",
+   "max": 4,
+   "id": "ff_chin_13",
+   "label": "Weak chin",
+   "fragment": "weak chin",
+   "look": "weak receding chin",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": "chin",
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/freak_face/ff_chin_13.webp",
+    "bytes": 18446,
+    "kind": "reference_photo"
+   }
+  },
+  "freak_face/ff_forehead_14": {
+   "key": "freak_face/ff_forehead_14",
+   "category": "freak_face",
+   "category_label": "Features",
+   "kind": "media",
+   "max": 4,
+   "id": "ff_forehead_14",
+   "label": "Big forehead",
+   "fragment": "big forehead",
+   "look": "huge high forehead with a receding hairline",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": "forehead",
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/freak_face/ff_forehead_14.webp",
+    "bytes": 16768,
+    "kind": "reference_photo"
+   }
+  },
+  "facial_hair/fh_none": {
+   "key": "facial_hair/fh_none",
+   "category": "facial_hair",
+   "category_label": "Facial hair",
+   "kind": "media",
+   "max": 1,
+   "id": "fh_none",
+   "label": "Clean-shaven",
+   "fragment": "clean-shaven",
+   "look": "clean-shaven",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/facial_hair/fh_none.webp",
+    "bytes": 8604,
+    "kind": "reference_photo"
+   }
+  },
+  "facial_hair/fh_stubble": {
+   "key": "facial_hair/fh_stubble",
+   "category": "facial_hair",
+   "category_label": "Facial hair",
+   "kind": "media",
+   "max": 1,
+   "id": "fh_stubble",
+   "label": "Stubble",
+   "fragment": "stubble",
+   "look": "scruffy uneven stubble",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/facial_hair/fh_stubble.webp",
+    "bytes": 20132,
+    "kind": "reference_photo"
+   }
+  },
+  "facial_hair/fh_beard": {
+   "key": "facial_hair/fh_beard",
+   "category": "facial_hair",
+   "category_label": "Facial hair",
+   "kind": "media",
+   "max": 1,
+   "id": "fh_beard",
+   "label": "Full beard",
+   "fragment": "full beard",
+   "look": "full thick bushy beard",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/facial_hair/fh_beard.webp",
+    "bytes": 19662,
+    "kind": "reference_photo"
+   }
+  },
+  "facial_hair/fh_goatee": {
+   "key": "facial_hair/fh_goatee",
+   "category": "facial_hair",
+   "category_label": "Facial hair",
+   "kind": "media",
+   "max": 1,
+   "id": "fh_goatee",
+   "label": "Goatee",
+   "fragment": "goatee",
+   "look": "long thin pointed goatee",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/facial_hair/fh_goatee.webp",
+    "bytes": 15482,
+    "kind": "reference_photo"
+   }
+  },
+  "facial_hair/fh_moustache": {
+   "key": "facial_hair/fh_moustache",
+   "category": "facial_hair",
+   "category_label": "Facial hair",
+   "kind": "media",
+   "max": 1,
+   "id": "fh_moustache",
+   "label": "Moustache",
+   "fragment": "moustache",
+   "look": "thick 70s horseshoe moustache",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/facial_hair/fh_moustache.webp",
+    "bytes": 20270,
+    "kind": "reference_photo"
+   }
+  },
+  "facial_hair/fh_pencil": {
+   "key": "facial_hair/fh_pencil",
+   "category": "facial_hair",
+   "category_label": "Facial hair",
+   "kind": "media",
+   "max": 1,
+   "id": "fh_pencil",
+   "label": "Pencil moustache",
+   "fragment": "pencil moustache",
+   "look": "thin pencil moustache",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/facial_hair/fh_pencil.webp",
+    "bytes": 14050,
+    "kind": "reference_photo"
+   }
+  },
+  "facial_hair/fh_pushbroom": {
+   "key": "facial_hair/fh_pushbroom",
+   "category": "facial_hair",
+   "category_label": "Facial hair",
+   "kind": "media",
+   "max": 1,
+   "id": "fh_pushbroom",
+   "label": "Push-broom moustache",
+   "fragment": "push-broom moustache",
+   "look": "enormous walrus push-broom moustache",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/facial_hair/fh_pushbroom.webp",
+    "bytes": 24848,
+    "kind": "reference_photo"
+   }
+  },
+  "facial_hair/fh_braid": {
+   "key": "facial_hair/fh_braid",
+   "category": "facial_hair",
+   "category_label": "Facial hair",
+   "kind": "media",
+   "max": 1,
+   "id": "fh_braid",
+   "label": "Braided beard",
+   "fragment": "braided beard",
+   "look": "long viking beard with two braids",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/facial_hair/fh_braid.webp",
+    "bytes": 26966,
+    "kind": "reference_photo"
+   }
+  },
+  "hair/hs_lampshade": {
+   "key": "hair/hs_lampshade",
+   "category": "hair",
+   "category_label": "Hairstyle",
+   "kind": "media",
+   "max": 1,
+   "id": "hs_lampshade",
+   "label": "Lampshade bob",
+   "fragment": "lampshade bob",
+   "look": "rigid lampshade bob flaring out stiffly at the jaw with a blunt fringe",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/hair/hs_lampshade.webp",
+    "bytes": 15052,
+    "kind": "reference_photo"
+   }
+  },
+  "hair/hair_bald": {
+   "key": "hair/hair_bald",
+   "category": "hair",
+   "category_label": "Hairstyle",
+   "kind": "media",
+   "max": 1,
+   "id": "hair_bald",
+   "label": "Bald",
+   "fragment": "bald",
+   "look": "smooth shaved bald head",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/hair/hair_bald.webp",
+    "bytes": 8184,
+    "kind": "reference_photo"
+   }
+  },
+  "hair/hair_buzz": {
+   "key": "hair/hair_buzz",
+   "category": "hair",
+   "category_label": "Hairstyle",
+   "kind": "media",
+   "max": 1,
+   "id": "hair_buzz",
+   "label": "Buzz cut",
+   "fragment": "buzz cut",
+   "look": "very short bleached-style buzz cut",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/hair/hair_buzz.webp",
+    "bytes": 9952,
+    "kind": "reference_photo"
+   }
+  },
+  "hair/hair_bowl": {
+   "key": "hair/hair_bowl",
+   "category": "hair",
+   "category_label": "Hairstyle",
+   "kind": "media",
+   "max": 1,
+   "id": "hair_bowl",
+   "label": "Bowl cut",
+   "fragment": "bowl cut",
+   "look": "perfectly round glossy helmet bowl cut with a straight fringe",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/hair/hair_bowl.webp",
+    "bytes": 22764,
+    "kind": "reference_photo"
+   }
+  },
+  "hair/hair_mullet": {
+   "key": "hair/hair_mullet",
+   "category": "hair",
+   "category_label": "Hairstyle",
+   "kind": "media",
+   "max": 1,
+   "id": "hair_mullet",
+   "label": "Mullet",
+   "fragment": "mullet",
+   "look": "curly 80s mullet, short top and long wavy back",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/hair/hair_mullet.webp",
+    "bytes": 25370,
+    "kind": "reference_photo"
+   }
+  },
+  "hair/hair_braids": {
+   "key": "hair/hair_braids",
+   "category": "hair",
+   "category_label": "Hairstyle",
+   "kind": "media",
+   "max": 1,
+   "id": "hair_braids",
+   "label": "Braids",
+   "fragment": "braids",
+   "look": "long box braids with gold cuffs",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/hair/hair_braids.webp",
+    "bytes": 20310,
+    "kind": "reference_photo"
+   }
+  },
+  "hair/hair_pigtails": {
+   "key": "hair/hair_pigtails",
+   "category": "hair",
+   "category_label": "Hairstyle",
+   "kind": "media",
+   "max": 1,
+   "id": "hair_pigtails",
+   "label": "Pigtails",
+   "fragment": "pigtails",
+   "look": "two high pigtails with a blunt fringe",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/hair/hair_pigtails.webp",
+    "bytes": 21242,
+    "kind": "reference_photo"
+   }
+  },
+  "hair/hair_afro": {
+   "key": "hair/hair_afro",
+   "category": "hair",
+   "category_label": "Hairstyle",
+   "kind": "media",
+   "max": 1,
+   "id": "hair_afro",
+   "label": "Afro",
+   "fragment": "afro",
+   "look": "huge perfectly round afro",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/hair/hair_afro.webp",
+    "bytes": 21358,
+    "kind": "reference_photo"
+   }
+  },
+  "hair/hair_punk": {
+   "key": "hair/hair_punk",
+   "category": "hair",
+   "category_label": "Hairstyle",
+   "kind": "media",
+   "max": 1,
+   "id": "hair_punk",
+   "label": "Mohawk",
+   "fragment": "mohawk",
+   "look": "tall spiky mohawk on shaved sides",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/hair/hair_punk.webp",
+    "bytes": 14088,
+    "kind": "reference_photo"
+   }
+  },
+  "hair/hs_pompadour": {
+   "key": "hair/hs_pompadour",
+   "category": "hair",
+   "category_label": "Hairstyle",
+   "kind": "media",
+   "max": 1,
+   "id": "hs_pompadour",
+   "label": "Volume waves",
+   "fragment": "volume waves",
+   "look": "huge voluminous 70s feathered blow-out waves",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/hair/hs_pompadour.webp",
+    "bytes": 25086,
+    "kind": "reference_photo"
+   }
+  },
+  "hair/hs_beehive": {
+   "key": "hair/hs_beehive",
+   "category": "hair",
+   "category_label": "Hairstyle",
+   "kind": "media",
+   "max": 1,
+   "id": "hs_beehive",
+   "label": "Beehive",
+   "fragment": "beehive",
+   "look": "towering 60s beehive",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/hair/hs_beehive.webp",
+    "bytes": 12750,
+    "kind": "reference_photo"
+   }
+  },
+  "hair/hs_dome": {
+   "key": "hair/hs_dome",
+   "category": "hair",
+   "category_label": "Hairstyle",
+   "kind": "media",
+   "max": 1,
+   "id": "hs_dome",
+   "label": "Perm",
+   "fragment": "perm",
+   "look": "tight curly perm",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/hair/hs_dome.webp",
+    "bytes": 18504,
+    "kind": "reference_photo"
+   }
+  },
+  "hair/hair_long": {
+   "key": "hair/hair_long",
+   "category": "hair",
+   "category_label": "Hairstyle",
+   "kind": "media",
+   "max": 1,
+   "id": "hair_long",
+   "label": "Long hair",
+   "fragment": "long hair",
+   "look": "very long straight centre-parted hair past the chest",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/hair/hair_long.webp",
+    "bytes": 9340,
+    "kind": "reference_photo"
+   }
+  },
+  "hair/hair_short": {
+   "key": "hair/hair_short",
+   "category": "hair",
+   "category_label": "Hairstyle",
+   "kind": "media",
+   "max": 1,
+   "id": "hair_short",
+   "label": "Short hair",
+   "fragment": "short hair",
+   "look": "neat short cropped hair",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/hair/hair_short.webp",
+    "bytes": 14288,
+    "kind": "reference_photo"
+   }
+  },
+  "hair/hs_horns": {
+   "key": "hair/hs_horns",
+   "category": "hair",
+   "category_label": "Hairstyle",
+   "kind": "media",
+   "max": 1,
+   "id": "hs_horns",
+   "label": "Hair horns",
+   "fragment": "hair horns",
+   "look": "hair sculpted into two glossy curved devil horns",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/hair/hs_horns.webp",
+    "bytes": 13834,
+    "kind": "reference_photo"
+   }
+  },
+  "hair/hs_softserve": {
+   "key": "hair/hs_softserve",
+   "category": "hair",
+   "category_label": "Hairstyle",
+   "kind": "media",
+   "max": 1,
+   "id": "hs_softserve",
+   "label": "Soft-serve swirl",
+   "fragment": "soft-serve swirl hair",
+   "look": "hair piled into a tall soft-serve ice-cream swirl",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/hair/hs_softserve.webp",
+    "bytes": 8776,
+    "kind": "reference_photo"
+   }
+  },
+  "hair/hs_sphere": {
+   "key": "hair/hs_sphere",
+   "category": "hair",
+   "category_label": "Hairstyle",
+   "kind": "media",
+   "max": 1,
+   "id": "hs_sphere",
+   "label": "Curl sphere",
+   "fragment": "curl sphere hair",
+   "look": "giant tight-curl sphere of hair",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/hair/hs_sphere.webp",
+    "bytes": 23132,
+    "kind": "reference_photo"
+   }
+  },
+  "hair/hs_mouse": {
+   "key": "hair/hs_mouse",
+   "category": "hair",
+   "category_label": "Hairstyle",
+   "kind": "media",
+   "max": 1,
+   "id": "hs_mouse",
+   "label": "Mouse-ear puffs",
+   "fragment": "mouse-ear puffs",
+   "look": "two round bun puffs like mouse ears",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/hair/hs_mouse.webp",
+    "bytes": 13308,
+    "kind": "reference_photo"
+   }
+  },
+  "hair/hs_wings": {
+   "key": "hair/hs_wings",
+   "category": "hair",
+   "category_label": "Hairstyle",
+   "kind": "media",
+   "max": 1,
+   "id": "hs_wings",
+   "label": "Hair wings",
+   "fragment": "hair wings",
+   "look": "hair teased out sideways into two big fluffy wings",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/hair/hs_wings.webp",
+    "bytes": 28420,
+    "kind": "reference_photo"
+   }
+  },
+  "hair/hs_hedgehog": {
+   "key": "hair/hs_hedgehog",
+   "category": "hair",
+   "category_label": "Hairstyle",
+   "kind": "media",
+   "max": 1,
+   "id": "hs_hedgehog",
+   "label": "Hedgehog spikes",
+   "fragment": "hedgehog spikes",
+   "look": "spiky hedgehog spikes radiating out, frosted tips",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/hair/hs_hedgehog.webp",
+    "bytes": 19034,
+    "kind": "reference_photo"
+   }
+  },
+  "hair/hs_tufts": {
+   "key": "hair/hs_tufts",
+   "category": "hair",
+   "category_label": "Hairstyle",
+   "kind": "media",
+   "max": 1,
+   "id": "hs_tufts",
+   "label": "Bald + side tufts",
+   "fragment": "bald with side tufts",
+   "look": "bald crown with two wild side tufts",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/hair/hs_tufts.webp",
+    "bytes": 19892,
+    "kind": "reference_photo"
+   }
+  },
+  "hair/hs_stairs": {
+   "key": "hair/hs_stairs",
+   "category": "hair",
+   "category_label": "Hairstyle",
+   "kind": "media",
+   "max": 1,
+   "id": "hs_stairs",
+   "label": "Stair steps",
+   "fragment": "stair-step hair",
+   "look": "flat-top hair cut into a staircase of steps",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/hair/hs_stairs.webp",
+    "bytes": 13552,
+    "kind": "reference_photo"
+   }
+  },
+  "hair/hs_shelf": {
+   "key": "hair/hs_shelf",
+   "category": "hair",
+   "category_label": "Hairstyle",
+   "kind": "media",
+   "max": 1,
+   "id": "hs_shelf",
+   "label": "Shelf bob",
+   "fragment": "shelf bob",
+   "look": "straight bob with one side jutting out horizontally like a shelf",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/hair/hs_shelf.webp",
+    "bytes": 17140,
+    "kind": "reference_photo"
+   }
+  },
+  "hair/hs_corkscrews": {
+   "key": "hair/hs_corkscrews",
+   "category": "hair",
+   "category_label": "Hairstyle",
+   "kind": "media",
+   "max": 1,
+   "id": "hs_corkscrews",
+   "label": "Twin corkscrews",
+   "fragment": "twin corkscrews",
+   "look": "two tall twisted corkscrew horns of hair",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/hair/hs_corkscrews.webp",
+    "bytes": 15466,
+    "kind": "reference_photo"
+   }
+  },
+  "hair/hs_sidecoil": {
+   "key": "hair/hs_sidecoil",
+   "category": "hair",
+   "category_label": "Hairstyle",
+   "kind": "media",
+   "max": 1,
+   "id": "hs_sidecoil",
+   "label": "Side coil",
+   "fragment": "side coil",
+   "look": "single giant coiled bun on one side of the head",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/hair/hs_sidecoil.webp",
+    "bytes": 18268,
+    "kind": "reference_photo"
+   }
+  },
+  "hair/hs_mushroom": {
+   "key": "hair/hs_mushroom",
+   "category": "hair",
+   "category_label": "Hairstyle",
+   "kind": "media",
+   "max": 1,
+   "id": "hs_mushroom",
+   "label": "Mushroom bowl",
+   "fragment": "mushroom bowl",
+   "look": "wide mushroom-cap bowl cut",
+   "card_styling": null,
+   "tiers": [
+    "freak",
+    "total"
+   ],
+   "bold_only": true,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/hair/hs_mushroom.webp",
+    "bytes": 20968,
+    "kind": "reference_photo"
+   }
+  },
+  "hair_colour/hc_black": {
+   "key": "hair_colour/hc_black",
+   "category": "hair_colour",
+   "category_label": "Hair Color",
+   "kind": "color",
+   "max": 1,
+   "id": "hc_black",
+   "label": "Jet black",
+   "fragment": "jet black hair",
+   "look": null,
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": "#151515",
+   "image": {
+    "rel": "assets/options/hair_colour/hc_black.webp",
+    "bytes": 1218,
+    "kind": "color_swatch"
+   }
+  },
+  "hair_colour/hc_darkbrown": {
+   "key": "hair_colour/hc_darkbrown",
+   "category": "hair_colour",
+   "category_label": "Hair Color",
+   "kind": "color",
+   "max": 1,
+   "id": "hc_darkbrown",
+   "label": "Dark brown",
+   "fragment": "dark brown hair",
+   "look": null,
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": "#39281f",
+   "image": {
+    "rel": "assets/options/hair_colour/hc_darkbrown.webp",
+    "bytes": 1402,
+    "kind": "color_swatch"
+   }
+  },
+  "hair_colour/hc_chestnut": {
+   "key": "hair_colour/hc_chestnut",
+   "category": "hair_colour",
+   "category_label": "Hair Color",
+   "kind": "color",
+   "max": 1,
+   "id": "hc_chestnut",
+   "label": "Chestnut",
+   "fragment": "chestnut hair",
+   "look": null,
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": "#794a33",
+   "image": {
+    "rel": "assets/options/hair_colour/hc_chestnut.webp",
+    "bytes": 1422,
+    "kind": "color_swatch"
+   }
+  },
+  "hair_colour/hc_ginger": {
+   "key": "hair_colour/hc_ginger",
+   "category": "hair_colour",
+   "category_label": "Hair Color",
+   "kind": "color",
+   "max": 1,
+   "id": "hc_ginger",
+   "label": "Ginger",
+   "fragment": "ginger hair",
+   "look": null,
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": "#b56131",
+   "image": {
+    "rel": "assets/options/hair_colour/hc_ginger.webp",
+    "bytes": 1324,
+    "kind": "color_swatch"
+   }
+  },
+  "hair_colour/hc_red": {
+   "key": "hair_colour/hc_red",
+   "category": "hair_colour",
+   "category_label": "Hair Color",
+   "kind": "color",
+   "max": 1,
+   "id": "hc_red",
+   "label": "Red",
+   "fragment": "red hair",
+   "look": null,
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": "#b43636",
+   "image": {
+    "rel": "assets/options/hair_colour/hc_red.webp",
+    "bytes": 1244,
+    "kind": "color_swatch"
+   }
+  },
+  "hair_colour/hc_blonde": {
+   "key": "hair_colour/hc_blonde",
+   "category": "hair_colour",
+   "category_label": "Hair Color",
+   "kind": "color",
+   "max": 1,
+   "id": "hc_blonde",
+   "label": "Blonde",
+   "fragment": "blonde hair",
+   "look": null,
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": "#d9b774",
+   "image": {
+    "rel": "assets/options/hair_colour/hc_blonde.webp",
+    "bytes": 1398,
+    "kind": "color_swatch"
+   }
+  },
+  "hair_colour/hc_platinum": {
+   "key": "hair_colour/hc_platinum",
+   "category": "hair_colour",
+   "category_label": "Hair Color",
+   "kind": "color",
+   "max": 1,
+   "id": "hc_platinum",
+   "label": "Platinum",
+   "fragment": "platinum hair",
+   "look": null,
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": "#e4d9bc",
+   "image": {
+    "rel": "assets/options/hair_colour/hc_platinum.webp",
+    "bytes": 1254,
+    "kind": "color_swatch"
+   }
+  },
+  "hair_colour/hc_grey": {
+   "key": "hair_colour/hc_grey",
+   "category": "hair_colour",
+   "category_label": "Hair Color",
+   "kind": "color",
+   "max": 1,
+   "id": "hc_grey",
+   "label": "Grey",
+   "fragment": "grey hair",
+   "look": null,
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": "#8c8c8c",
+   "image": {
+    "rel": "assets/options/hair_colour/hc_grey.webp",
+    "bytes": 946,
+    "kind": "color_swatch"
+   }
+  },
+  "hair_colour/hc_white": {
+   "key": "hair_colour/hc_white",
+   "category": "hair_colour",
+   "category_label": "Hair Color",
+   "kind": "color",
+   "max": 1,
+   "id": "hc_white",
+   "label": "White",
+   "fragment": "white hair",
+   "look": null,
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": "#eee9dd",
+   "image": {
+    "rel": "assets/options/hair_colour/hc_white.webp",
+    "bytes": 1124,
+    "kind": "color_swatch"
+   }
+  },
+  "hair_colour/hc_pink": {
+   "key": "hair_colour/hc_pink",
+   "category": "hair_colour",
+   "category_label": "Hair Color",
+   "kind": "color",
+   "max": 1,
+   "id": "hc_pink",
+   "label": "Pastel pink",
+   "fragment": "pastel pink hair",
+   "look": null,
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": "#dd9ab7",
+   "image": {
+    "rel": "assets/options/hair_colour/hc_pink.webp",
+    "bytes": 1482,
+    "kind": "color_swatch"
+   }
+  },
+  "hair_colour/hc_lilac": {
+   "key": "hair_colour/hc_lilac",
+   "category": "hair_colour",
+   "category_label": "Hair Color",
+   "kind": "color",
+   "max": 1,
+   "id": "hc_lilac",
+   "label": "Lilac",
+   "fragment": "lilac hair",
+   "look": null,
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": "#b0a0ce",
+   "image": {
+    "rel": "assets/options/hair_colour/hc_lilac.webp",
+    "bytes": 1010,
+    "kind": "color_swatch"
+   }
+  },
+  "hair_colour/hc_blue": {
+   "key": "hair_colour/hc_blue",
+   "category": "hair_colour",
+   "category_label": "Hair Color",
+   "kind": "color",
+   "max": 1,
+   "id": "hc_blue",
+   "label": "Blue",
+   "fragment": "blue hair",
+   "look": null,
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": "#4080bb",
+   "image": {
+    "rel": "assets/options/hair_colour/hc_blue.webp",
+    "bytes": 1228,
+    "kind": "color_swatch"
+   }
+  },
+  "hair_colour/hc_green": {
+   "key": "hair_colour/hc_green",
+   "category": "hair_colour",
+   "category_label": "Hair Color",
+   "kind": "color",
+   "max": 1,
+   "id": "hc_green",
+   "label": "Green",
+   "fragment": "green hair",
+   "look": null,
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": "#548060",
+   "image": {
+    "rel": "assets/options/hair_colour/hc_green.webp",
+    "bytes": 1132,
+    "kind": "color_swatch"
+   }
+  },
+  "distinctive/df_hetero": {
+   "key": "distinctive/df_hetero",
+   "category": "distinctive",
+   "category_label": "Distinctive features",
+   "kind": "media",
+   "max": 2,
+   "id": "df_hetero",
+   "label": "Odd eyes",
+   "fragment": "heterochromia (odd eyes)",
+   "look": "heterochromia: one blue eye, one brown eye",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/distinctive/df_hetero.webp",
+    "bytes": 24390,
+    "kind": "reference_photo"
+   }
+  },
+  "distinctive/df_facetattoo": {
+   "key": "distinctive/df_facetattoo",
+   "category": "distinctive",
+   "category_label": "Distinctive features",
+   "kind": "media",
+   "max": 2,
+   "id": "df_facetattoo",
+   "label": "Face tattoo",
+   "fragment": "face tattoo",
+   "look": "small scattered face tattoos",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/distinctive/df_facetattoo.webp",
+    "bytes": 17712,
+    "kind": "reference_photo"
+   }
+  },
+  "distinctive/df_septum": {
+   "key": "distinctive/df_septum",
+   "category": "distinctive",
+   "category_label": "Distinctive features",
+   "kind": "media",
+   "max": 2,
+   "id": "df_septum",
+   "label": "Piercing",
+   "fragment": "septum piercing",
+   "look": "septum ring piercing",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/distinctive/df_septum.webp",
+    "bytes": 26934,
+    "kind": "reference_photo"
+   }
+  },
+  "distinctive/df_ears": {
+   "key": "distinctive/df_ears",
+   "category": "distinctive",
+   "category_label": "Distinctive features",
+   "kind": "media",
+   "max": 2,
+   "id": "df_ears",
+   "label": "Stacked ear piercings",
+   "fragment": "stacked ear piercings",
+   "look": "ear cartilage stacked with many rings",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/distinctive/df_ears.webp",
+    "bytes": 21818,
+    "kind": "reference_photo"
+   }
+  },
+  "distinctive/df_slits": {
+   "key": "distinctive/df_slits",
+   "category": "distinctive",
+   "category_label": "Distinctive features",
+   "kind": "media",
+   "max": 2,
+   "id": "df_slits",
+   "label": "Brow slits",
+   "fragment": "brow slits",
+   "look": "shaved slits in one eyebrow",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/distinctive/df_slits.webp",
+    "bytes": 21748,
+    "kind": "reference_photo"
+   }
+  },
+  "distinctive/df_bleached": {
+   "key": "distinctive/df_bleached",
+   "category": "distinctive",
+   "category_label": "Distinctive features",
+   "kind": "media",
+   "max": 2,
+   "id": "df_bleached",
+   "label": "Bleached",
+   "fragment": "bleached brows",
+   "look": "bleached near-white eyebrows",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/distinctive/df_bleached.webp",
+    "bytes": 16902,
+    "kind": "reference_photo"
+   }
+  },
+  "distinctive/df_nobrows": {
+   "key": "distinctive/df_nobrows",
+   "category": "distinctive",
+   "category_label": "Distinctive features",
+   "kind": "media",
+   "max": 2,
+   "id": "df_nobrows",
+   "label": "No brows",
+   "fragment": "no brows",
+   "look": "no eyebrows at all",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/distinctive/df_nobrows.webp",
+    "bytes": 16150,
+    "kind": "reference_photo"
+   }
+  },
+  "distinctive/df_grill": {
+   "key": "distinctive/df_grill",
+   "category": "distinctive",
+   "category_label": "Distinctive features",
+   "kind": "media",
+   "max": 2,
+   "id": "df_grill",
+   "label": "Gold grill",
+   "fragment": "gold grill teeth",
+   "look": "full gold grill on the teeth",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/distinctive/df_grill.webp",
+    "bytes": 26164,
+    "kind": "reference_photo"
+   }
+  },
+  "distinctive/df_braces": {
+   "key": "distinctive/df_braces",
+   "category": "distinctive",
+   "category_label": "Distinctive features",
+   "kind": "media",
+   "max": 2,
+   "id": "df_braces",
+   "label": "Braces",
+   "fragment": "braces",
+   "look": "metal braces",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/distinctive/df_braces.webp",
+    "bytes": 26756,
+    "kind": "reference_photo"
+   }
+  },
+  "distinctive/df_scar": {
+   "key": "distinctive/df_scar",
+   "category": "distinctive",
+   "category_label": "Distinctive features",
+   "kind": "media",
+   "max": 2,
+   "id": "df_scar",
+   "label": "Brow scar",
+   "fragment": "brow scar",
+   "look": "scar cutting through one eyebrow",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/distinctive/df_scar.webp",
+    "bytes": 29176,
+    "kind": "reference_photo"
+   }
+  },
+  "distinctive/df_gems": {
+   "key": "distinctive/df_gems",
+   "category": "distinctive",
+   "category_label": "Distinctive features",
+   "kind": "media",
+   "max": 2,
+   "id": "df_gems",
+   "label": "Face gems",
+   "fragment": "face gems",
+   "look": "colourful face gems and rhinestones under the eyes",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/distinctive/df_gems.webp",
+    "bytes": 28710,
+    "kind": "reference_photo"
+   }
+  },
+  "distinctive/df_elf": {
+   "key": "distinctive/df_elf",
+   "category": "distinctive",
+   "category_label": "Distinctive features",
+   "kind": "media",
+   "max": 2,
+   "id": "df_elf",
+   "label": "Elf ears",
+   "fragment": "elf ears",
+   "look": "long pointed elf ears",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/distinctive/df_elf.webp",
+    "bytes": 18828,
+    "kind": "reference_photo"
+   }
+  },
+  "distinctive/df_lashes": {
+   "key": "distinctive/df_lashes",
+   "category": "distinctive",
+   "category_label": "Distinctive features",
+   "kind": "media",
+   "max": 2,
+   "id": "df_lashes",
+   "label": "Big lashes",
+   "fragment": "big lashes",
+   "look": "huge dramatic doll lashes",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/distinctive/df_lashes.webp",
+    "bytes": 28122,
+    "kind": "reference_photo"
+   }
+  },
+  "distinctive/df_bandage": {
+   "key": "distinctive/df_bandage",
+   "category": "distinctive",
+   "category_label": "Distinctive features",
+   "kind": "media",
+   "max": 2,
+   "id": "df_bandage",
+   "label": "Nose tape",
+   "fragment": "nose tape",
+   "look": "white strip of tape across the nose bridge",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/distinctive/df_bandage.webp",
+    "bytes": 24206,
+    "kind": "reference_photo"
+   }
+  },
+  "aesthetic/retro": {
+   "key": "aesthetic/retro",
+   "category": "aesthetic",
+   "category_label": "Style",
+   "kind": "media",
+   "max": 1,
+   "id": "retro",
+   "label": "Retro",
+   "fragment": "retro outfit",
+   "look": "head-to-toe mustard 70s suit with wide lapels and flared trousers, patterned shirt",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/aesthetic/retro.webp",
+    "bytes": 7178,
+    "kind": "reference_photo"
+   }
+  },
+  "aesthetic/sporty": {
+   "key": "aesthetic/sporty",
+   "category": "aesthetic",
+   "category_label": "Style",
+   "kind": "media",
+   "max": 1,
+   "id": "sporty",
+   "label": "Sporty",
+   "fragment": "sporty outfit",
+   "look": "shiny purple-teal 90s windbreaker tracksuit, headband, chunky white trainers",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/aesthetic/sporty.webp",
+    "bytes": 9568,
+    "kind": "reference_photo"
+   }
+  },
+  "aesthetic/y2k": {
+   "key": "aesthetic/y2k",
+   "category": "aesthetic",
+   "category_label": "Style",
+   "kind": "media",
+   "max": 1,
+   "id": "y2k",
+   "label": "Y2K",
+   "fragment": "Y2K fashion",
+   "look": "all-pink velour Y2K tracksuit, tinted small sunglasses",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/aesthetic/y2k.webp",
+    "bytes": 6726,
+    "kind": "reference_photo"
+   }
+  },
+  "aesthetic/theatrical": {
+   "key": "aesthetic/theatrical",
+   "category": "aesthetic",
+   "category_label": "Style",
+   "kind": "media",
+   "max": 1,
+   "id": "theatrical",
+   "label": "Theatre",
+   "fragment": "theatrical costume",
+   "look": "Elizabethan costume: huge white ruff collar, velvet doublet, long red cape",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/aesthetic/theatrical.webp",
+    "bytes": 10638,
+    "kind": "reference_photo"
+   }
+  },
+  "aesthetic/goth": {
+   "key": "aesthetic/goth",
+   "category": "aesthetic",
+   "category_label": "Style",
+   "kind": "media",
+   "max": 1,
+   "id": "goth",
+   "label": "Goth",
+   "fragment": "goth outfit",
+   "look": "floor-length black gothic coat, platform boots, severe black fringe",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/aesthetic/goth.webp",
+    "bytes": 5100,
+    "kind": "reference_photo"
+   }
+  },
+  "aesthetic/suits": {
+   "key": "aesthetic/suits",
+   "category": "aesthetic",
+   "category_label": "Style",
+   "kind": "media",
+   "max": 1,
+   "id": "suits",
+   "label": "Suits",
+   "fragment": "formal suit",
+   "look": "slim black two-piece suit, white shirt, skinny black tie",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/aesthetic/suits.webp",
+    "bytes": 5098,
+    "kind": "reference_photo"
+   }
+  },
+  "aesthetic/streetstyle": {
+   "key": "aesthetic/streetstyle",
+   "category": "aesthetic",
+   "category_label": "Style",
+   "kind": "media",
+   "max": 1,
+   "id": "streetstyle",
+   "label": "Streetstyle",
+   "fragment": "streetstyle outfit",
+   "look": "bright orange puffer jacket, beanie, cargo trousers, cross-body bag",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/aesthetic/streetstyle.webp",
+    "bytes": 7880,
+    "kind": "reference_photo"
+   }
+  },
+  "aesthetic/casual": {
+   "key": "aesthetic/casual",
+   "category": "aesthetic",
+   "category_label": "Style",
+   "kind": "media",
+   "max": 1,
+   "id": "casual",
+   "label": "Casual",
+   "fragment": "casual outfit",
+   "look": "plain white tee, light-wash jeans, belt bag, sandals with socks",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/aesthetic/casual.webp",
+    "bytes": 6032,
+    "kind": "reference_photo"
+   }
+  },
+  "accessory/acc_none": {
+   "key": "accessory/acc_none",
+   "category": "accessory",
+   "category_label": "Accessories",
+   "kind": "media",
+   "max": 3,
+   "id": "acc_none",
+   "label": "None",
+   "fragment": "no accessories",
+   "look": "no accessories",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/accessory/acc_none.webp",
+    "bytes": 666,
+    "kind": "reference_photo"
+   }
+  },
+  "accessory/acc_glasses": {
+   "key": "accessory/acc_glasses",
+   "category": "accessory",
+   "category_label": "Accessories",
+   "kind": "media",
+   "max": 3,
+   "id": "acc_glasses",
+   "label": "Glasses",
+   "fragment": "wearing glasses",
+   "look": "rimless glasses",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/accessory/acc_glasses.webp",
+    "bytes": 4430,
+    "kind": "reference_photo"
+   }
+  },
+  "accessory/acc_headphones": {
+   "key": "accessory/acc_headphones",
+   "category": "accessory",
+   "category_label": "Accessories",
+   "kind": "media",
+   "max": 3,
+   "id": "acc_headphones",
+   "label": "Headphones",
+   "fragment": "wearing headphones",
+   "look": "large black over-ear headphones",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/accessory/acc_headphones.webp",
+    "bytes": 11834,
+    "kind": "reference_photo"
+   }
+  },
+  "accessory/acc_jewelry": {
+   "key": "accessory/acc_jewelry",
+   "category": "accessory",
+   "category_label": "Accessories",
+   "kind": "media",
+   "max": 3,
+   "id": "acc_jewelry",
+   "label": "Jewelry",
+   "fragment": "wearing jewelry",
+   "look": "layered silver chain necklaces",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/accessory/acc_jewelry.webp",
+    "bytes": 15008,
+    "kind": "reference_photo"
+   }
+  },
+  "accessory/acc_hat": {
+   "key": "accessory/acc_hat",
+   "category": "accessory",
+   "category_label": "Accessories",
+   "kind": "media",
+   "max": 3,
+   "id": "acc_hat",
+   "label": "Hat",
+   "fragment": "wearing a hat",
+   "look": "faded black baseball cap",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/accessory/acc_hat.webp",
+    "bytes": 22868,
+    "kind": "reference_photo"
+   }
+  },
+  "accessory/acc_bag": {
+   "key": "accessory/acc_bag",
+   "category": "accessory",
+   "category_label": "Accessories",
+   "kind": "media",
+   "max": 3,
+   "id": "acc_bag",
+   "label": "Bag",
+   "fragment": "carrying a bag",
+   "look": "brown suede top-handle bag",
+   "card_styling": null,
+   "tiers": [
+    "normal",
+    "freak",
+    "total"
+   ],
+   "bold_only": false,
+   "slot": null,
+   "swatch": null,
+   "image": {
+    "rel": "assets/options/accessory/acc_bag.webp",
+    "bytes": 16054,
+    "kind": "reference_photo"
+   }
+  }
+ }
+}

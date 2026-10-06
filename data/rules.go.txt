@@ -1,0 +1,202 @@
+package influencer
+
+import (
+	"fmt"
+	"sort"
+	"strings"
+)
+
+// Selection is the client-submitted per-category pick map.
+type Selection map[string][]string
+
+// ValidationError is returned for rule violations; the HTTP layer renders it
+// as a 400 with a human-readable English message (same copy family as the
+// upstream reference product).
+type ValidationError struct {
+	Field   string
+	Message string
+}
+
+func (e *ValidationError) Error() string { return e.Message }
+
+// promptOrder is the fixed category order used for prompt assembly.
+var promptOrder = []string{
+	"gender", "ethnicity_origin_base", "age", "skin_tone", "height",
+	"body_type", "proportions", "freak_head", "freak_neck", "eye_shape",
+	"eye_color", "freak_face", "facial_hair", "hair", "hair_colour",
+	"distinctive", "aesthetic", "accessory",
+}
+
+func has(sel Selection, cat, opt string) bool {
+	for _, v := range sel[cat] {
+		if v == opt {
+			return true
+		}
+	}
+	return false
+}
+
+func hasAny(sel Selection, cat string, opts ...string) bool {
+	for _, v := range sel[cat] {
+		for _, o := range opts {
+			if v == o {
+				return true
+			}
+		}
+	}
+	return false
+}
+
+func contains(arr []string, v string) bool {
+	for _, a := range arr {
+		if a == v {
+			return true
+		}
+	}
+	return false
+}
+
+// conflictMessage implements the 4 hard constraints: 2 from the upstream
+// conflict table plus 2 neck/teeth exclusions from the same rules dataset.
+func conflictMessage(tier string, sel Selection) string {
+	switch {
+	case has(sel, "body_type", "body_heavy") && hasAny(sel, "height", "h_tall", "h_very_tall"):
+		return "Heavy build cannot be combined with Tall or Very tall."
+	case tier != "normal" &&
+		hasAny(sel, "body_type", "body_heavy", "body_muscular", "body_ultra") &&
+		hasAny(sel, "proportions", "pr_shortlegs", "pr_longlimbs"):
+		return "This build cannot be combined with Short legs or Long limbs in this mode."
+	case has(sel, "body_type", "body_ultra") && has(sel, "freak_neck", "neck_long"):
+		return "Extreme muscular build cannot be combined with Long neck."
+	case has(sel, "freak_neck", "neck_long") && has(sel, "freak_face", "ff_teeth_11"):
+		return "Long neck cannot be combined with Buck teeth."
+	}
+	return ""
+}
+
+// NormalizeSelection applies the same normalization the UI enforces:
+// - unknown category / option is rejected
+// - options not visible in the tier are dropped
+// - acc_none is exclusive and clears other accessory picks
+// - same-slot options in a multi-select category replace each other (last wins)
+// - category max keeps the LAST picked options (matching UI append semantics)
+func NormalizeSelection(tier string, sel Selection) (Selection, *ValidationError) {
+	if !ValidTier(tier) {
+		return nil, &ValidationError{Field: "tier", Message: "invalid tier"}
+	}
+	out := Selection{}
+	for catID, picks := range sel {
+		c := CategoryByID(catID)
+		if c == nil {
+			return nil, &ValidationError{Field: catID, Message: fmt.Sprintf("unknown category %q", catID)}
+		}
+		maxN := c.Max
+		if maxN <= 0 {
+			maxN = 1
+		}
+		kept := make([]string, 0, len(picks))
+		for _, id := range picks {
+			o := OptionByID(catID, id)
+			if o == nil {
+				return nil, &ValidationError{Field: catID, Message: fmt.Sprintf("unknown option %q", id)}
+			}
+			if !contains(o.VisibleIn, tier) {
+				continue
+			}
+			if catID == "accessory" && id == "acc_none" {
+				kept = []string{id}
+				continue
+			}
+			if catID == "accessory" && contains(kept, "acc_none") {
+				kept = kept[:0]
+			}
+			if o.Slot != nil && *o.Slot != "" {
+				filtered := kept[:0]
+				for _, prev := range kept {
+					po := OptionByID(catID, prev)
+					if po != nil && po.Slot != nil && *po.Slot == *o.Slot {
+						continue
+					}
+					filtered = append(filtered, prev)
+				}
+				kept = filtered
+			}
+			if len(kept) >= maxN {
+				continue
+			}
+			if !contains(kept, id) {
+				kept = append(kept, id)
+			}
+		}
+		if len(kept) > 0 {
+			out[catID] = kept
+		}
+	}
+	return out, nil
+}
+
+// ValidateSelection normalizes then enforces the hard conflicts.
+func ValidateSelection(tier string, sel Selection) (Selection, error) {
+	norm, verr := NormalizeSelection(tier, sel)
+	if verr != nil {
+		return nil, verr
+	}
+	if msg := conflictMessage(tier, norm); msg != "" {
+		return nil, &ValidationError{Field: "selection", Message: msg}
+	}
+	return norm, nil
+}
+
+// tierLead returns the prompt lead for the exaggeration tier.
+func tierLead(tier string) string {
+	switch tier {
+	case "total":
+		return "Extreme caricature, exaggerated proportions, full-body character portrait of a"
+	case "freak":
+		return "Stylized, slightly exaggerated, full-body character portrait of a"
+	default:
+		return "Natural, realistic, full-body character portrait of a"
+	}
+}
+
+// BuildPrompt assembles the generation prompt.
+func BuildPrompt(tier string, sel Selection, brief string) string {
+	parts := make([]string, 0, 8)
+	for _, catID := range promptOrder {
+		ids := sel[catID]
+		for _, id := range ids {
+			parts = append(parts, Fragment(catID, id))
+		}
+	}
+	var b strings.Builder
+	b.WriteString(tierLead(tier))
+	if len(parts) > 0 {
+		b.WriteString(" ")
+		b.WriteString(strings.Join(parts, ", "))
+	}
+	brief = strings.TrimSpace(brief)
+	if brief != "" {
+		b.WriteString(". ")
+		b.WriteString(brief)
+	}
+	b.WriteString(". Studio background, full-body shot, 9:16 composition, high detail, clean lighting.")
+	return b.String()
+}
+
+// PickedLabels lists human labels for a selection.
+func PickedLabels(sel Selection) []string {
+	out := []string{}
+	keys := make([]string, 0, len(sel))
+	for k := range sel {
+		keys = append(keys, k)
+	}
+	sort.Strings(keys)
+	for _, k := range keys {
+		for _, id := range sel[k] {
+			if o := OptionByID(k, id); o != nil {
+				out = append(out, o.LabelEN)
+			}
+		}
+	}
+	return out
+}

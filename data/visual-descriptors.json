@@ -1,0 +1,480 @@
+{
+  "_doc": "Visual overlay distilled by looking at every option thumbnail in assets/options (2026-10-05). taxonomy.json fragments are 2-4 word labels; these descriptors carry the actual look of the reference image into the prompt. Overlay only — taxonomy.json stays the upstream truth. 'look' = what to write in the prompt; 'card_styling' = the styling the reference card itself uses (inspiration, optional, never forced).",
+  "house_style": "Every reference card shares one aesthetic: plain white/light-grey studio, frontal symmetrical framing, completely deadpan face, bold saturated single-colour wardrobe, one exaggerated feature, editorial-photoreal skin. Keep this unless the user asks otherwise.",
+  "categories": {
+    "ethnicity_origin_base": {
+      "african": {
+        "look": "African facial features",
+        "card_styling": "towering flat-top hi-top fade, small round wire glasses, mustard turtleneck"
+      },
+      "east_asian": {
+        "look": "East Asian facial features, ordinary everyday face (not idol-like)",
+        "card_styling": "glossy jet-black blunt bob with a heavy straight fringe, white ruffled Victorian collar"
+      },
+      "european": {
+        "look": "European facial features",
+        "card_styling": "flat side-parted dirty-blond hair, brown tweed suit and tie, long narrow face"
+      },
+      "indian": {
+        "look": "South Asian facial features",
+        "card_styling": "sleek top bun, oversized tinted 70s glasses, teal paisley pussy-bow blouse"
+      },
+      "middle_eastern": {
+        "look": "Middle Eastern facial features, strong brows",
+        "card_styling": "tall glossy black curly pompadour, unibrow, pencil moustache, mint satin open-collar shirt"
+      },
+      "latin_american": {
+        "look": "mixed-race Latin American facial features",
+        "card_styling": "high copper curly afro puff, tiny round glasses, striped retro knit polo"
+      }
+    },
+    "body_type": {
+      "body_slim": {
+        "look": "very thin narrow frame"
+      },
+      "body_athletic": {
+        "look": "lean athletic frame"
+      },
+      "body_muscular": {
+        "look": "broad muscular frame, thick arms and chest"
+      },
+      "body_curvy": {
+        "look": "hourglass curvy figure"
+      },
+      "body_heavy": {
+        "look": "heavy round build with a large belly"
+      },
+      "body_ultra": {
+        "look": "absurdly hyper-muscular bodybuilder torso and arms on an ordinary head"
+      }
+    },
+    "proportions": {
+      "pr_longlimbs": {
+        "look": "extra-long legs and arms"
+      },
+      "pr_shortlegs": {
+        "look": "noticeably short legs, long torso"
+      },
+      "pr_shoulders": {
+        "look": "very broad shoulders"
+      },
+      "pr_waist": {
+        "look": "tiny cinched waist"
+      },
+      "pr_egg": {
+        "look": "egg-shaped body: wide round hips and balloon trousers tapering to skinny ankles"
+      },
+      "pr_potbelly": {
+        "look": "round pot belly pushing out a buttoned waistcoat"
+      }
+    },
+    "freak_head": {
+      "head_oval": {
+        "look": "balanced oval face"
+      },
+      "head_long": {
+        "look": "long elongated face"
+      },
+      "head_tiny": {
+        "look": "comically tiny head on a normal-sized body"
+      },
+      "head_forehead": {
+        "look": "very high domed forehead"
+      },
+      "head_ancient": {
+        "look": "heavy caveman-like brow ridge and broad flat nose"
+      },
+      "head_herojaw": {
+        "look": "massively wide chiseled comic-hero jaw"
+      },
+      "head_megachin": {
+        "look": "huge oversized chin and jowls"
+      },
+      "head_round": {
+        "look": "round chubby face"
+      },
+      "head_square": {
+        "look": "blocky square face and jaw"
+      },
+      "head_heart": {
+        "look": "heart-shaped face with a pointed chin"
+      }
+    },
+    "eye_shape": {
+      "es_almond": {
+        "look": "almond-shaped eyes"
+      },
+      "es_round": {
+        "look": "round open eyes"
+      },
+      "es_monolid": {
+        "look": "monolid eyes"
+      },
+      "es_close": {
+        "look": "close-set eyes"
+      },
+      "es_wide": {
+        "look": "very wide-set eyes"
+      },
+      "es_uneven": {
+        "look": "slightly uneven eyes, one smaller"
+      },
+      "es_large": {
+        "look": "large bright eyes"
+      },
+      "es_huge": {
+        "look": "enormous cartoonishly huge eyes with giant irises"
+      },
+      "es_hooded": {
+        "look": "hooded eyes"
+      },
+      "es_upturned": {
+        "look": "upturned cat-like eyes"
+      },
+      "es_downturned": {
+        "look": "droopy downturned eyes"
+      }
+    },
+    "freak_face": {
+      "fn_freckles": {
+        "look": "dense freckles across nose and cheeks"
+      },
+      "fn_dimples": {
+        "look": "deep cheek dimples"
+      },
+      "fn_eyebags": {
+        "look": "heavy dark under-eye bags"
+      },
+      "ff_marks_12": {
+        "look": "round doll-like pink blush circles on the cheeks"
+      },
+      "fn_cheekbones": {
+        "look": "razor-sharp hollow cheekbones"
+      },
+      "fn_fulllips": {
+        "look": "very full glossy lips"
+      },
+      "fn_thickbrows": {
+        "look": "thick bushy dark eyebrows"
+      },
+      "fn_mole": {
+        "look": "small dark beauty mark above the lip"
+      },
+      "ff_nose_0": {
+        "look": "big bulbous red potato nose"
+      },
+      "ff_nose_1": {
+        "look": "small upturned button nose"
+      },
+      "ff_nose_2": {
+        "look": "long sharp pointy nose"
+      },
+      "fn_tinynose": {
+        "look": "tiny delicate nose"
+      },
+      "ff_lips_3": {
+        "look": "exaggerated pouty puckered lips"
+      },
+      "ff_lips_4": {
+        "look": "tiny pursed little mouth"
+      },
+      "fn_widemouth": {
+        "look": "very wide thin mouth"
+      },
+      "ff_brows_5": {
+        "look": "thick dark unibrow"
+      },
+      "ff_brows_6": {
+        "look": "pencil-thin highly arched 1920s brows"
+      },
+      "ff_brows_7": {
+        "look": "wild bushy upward-brushed brows"
+      },
+      "ff_ears_8": {
+        "look": "big protruding jug ears"
+      },
+      "ff_ears_9": {
+        "look": "mismatched uneven ears"
+      },
+      "ff_teeth_10": {
+        "look": "wide gap between the front teeth"
+      },
+      "ff_teeth_11": {
+        "look": "prominent buck teeth resting on the lower lip"
+      },
+      "fn_pointychin": {
+        "look": "sharp pointed chin"
+      },
+      "ff_chin_13": {
+        "look": "weak receding chin"
+      },
+      "ff_forehead_14": {
+        "look": "huge high forehead with a receding hairline"
+      }
+    },
+    "facial_hair": {
+      "fh_none": {
+        "look": "clean-shaven"
+      },
+      "fh_stubble": {
+        "look": "scruffy uneven stubble"
+      },
+      "fh_beard": {
+        "look": "full thick bushy beard"
+      },
+      "fh_goatee": {
+        "look": "long thin pointed goatee"
+      },
+      "fh_moustache": {
+        "look": "thick 70s horseshoe moustache"
+      },
+      "fh_pencil": {
+        "look": "thin pencil moustache"
+      },
+      "fh_pushbroom": {
+        "look": "enormous walrus push-broom moustache"
+      },
+      "fh_braid": {
+        "look": "long viking beard with two braids"
+      }
+    },
+    "hair": {
+      "hs_lampshade": {
+        "look": "rigid lampshade bob flaring out stiffly at the jaw with a blunt fringe"
+      },
+      "hair_bald": {
+        "look": "smooth shaved bald head"
+      },
+      "hair_buzz": {
+        "look": "very short bleached-style buzz cut"
+      },
+      "hair_bowl": {
+        "look": "perfectly round glossy helmet bowl cut with a straight fringe"
+      },
+      "hair_mullet": {
+        "look": "curly 80s mullet, short top and long wavy back"
+      },
+      "hair_braids": {
+        "look": "long box braids with gold cuffs"
+      },
+      "hair_pigtails": {
+        "look": "two high pigtails with a blunt fringe"
+      },
+      "hair_afro": {
+        "look": "huge perfectly round afro"
+      },
+      "hair_punk": {
+        "look": "tall spiky mohawk on shaved sides"
+      },
+      "hs_pompadour": {
+        "look": "huge voluminous 70s feathered blow-out waves"
+      },
+      "hs_beehive": {
+        "look": "towering 60s beehive"
+      },
+      "hs_dome": {
+        "look": "tight curly perm"
+      },
+      "hair_long": {
+        "look": "very long straight centre-parted hair past the chest"
+      },
+      "hair_short": {
+        "look": "neat short cropped hair"
+      },
+      "hs_horns": {
+        "look": "hair sculpted into two glossy curved devil horns"
+      },
+      "hs_softserve": {
+        "look": "hair piled into a tall soft-serve ice-cream swirl"
+      },
+      "hs_sphere": {
+        "look": "giant tight-curl sphere of hair"
+      },
+      "hs_mouse": {
+        "look": "two round bun puffs like mouse ears"
+      },
+      "hs_wings": {
+        "look": "hair teased out sideways into two big fluffy wings"
+      },
+      "hs_hedgehog": {
+        "look": "spiky hedgehog spikes radiating out, frosted tips"
+      },
+      "hs_tufts": {
+        "look": "bald crown with two wild side tufts"
+      },
+      "hs_stairs": {
+        "look": "flat-top hair cut into a staircase of steps"
+      },
+      "hs_shelf": {
+        "look": "straight bob with one side jutting out horizontally like a shelf"
+      },
+      "hs_corkscrews": {
+        "look": "two tall twisted corkscrew horns of hair"
+      },
+      "hs_sidecoil": {
+        "look": "single giant coiled bun on one side of the head"
+      },
+      "hs_mushroom": {
+        "look": "wide mushroom-cap bowl cut"
+      }
+    },
+    "distinctive": {
+      "df_hetero": {
+        "look": "heterochromia: one blue eye, one brown eye"
+      },
+      "df_facetattoo": {
+        "look": "small scattered face tattoos"
+      },
+      "df_septum": {
+        "look": "septum ring piercing"
+      },
+      "df_ears": {
+        "look": "ear cartilage stacked with many rings"
+      },
+      "df_slits": {
+        "look": "shaved slits in one eyebrow"
+      },
+      "df_bleached": {
+        "look": "bleached near-white eyebrows"
+      },
+      "df_nobrows": {
+        "look": "no eyebrows at all"
+      },
+      "df_grill": {
+        "look": "full gold grill on the teeth"
+      },
+      "df_braces": {
+        "look": "metal braces"
+      },
+      "df_scar": {
+        "look": "scar cutting through one eyebrow"
+      },
+      "df_gems": {
+        "look": "colourful face gems and rhinestones under the eyes"
+      },
+      "df_elf": {
+        "look": "long pointed elf ears"
+      },
+      "df_lashes": {
+        "look": "huge dramatic doll lashes"
+      },
+      "df_bandage": {
+        "look": "white strip of tape across the nose bridge"
+      }
+    },
+    "aesthetic": {
+      "retro": {
+        "look": "head-to-toe mustard 70s suit with wide lapels and flared trousers, patterned shirt"
+      },
+      "sporty": {
+        "look": "shiny purple-teal 90s windbreaker tracksuit, headband, chunky white trainers"
+      },
+      "y2k": {
+        "look": "all-pink velour Y2K tracksuit, tinted small sunglasses"
+      },
+      "theatrical": {
+        "look": "Elizabethan costume: huge white ruff collar, velvet doublet, long red cape"
+      },
+      "goth": {
+        "look": "floor-length black gothic coat, platform boots, severe black fringe"
+      },
+      "suits": {
+        "look": "slim black two-piece suit, white shirt, skinny black tie"
+      },
+      "streetstyle": {
+        "look": "bright orange puffer jacket, beanie, cargo trousers, cross-body bag"
+      },
+      "casual": {
+        "look": "plain white tee, light-wash jeans, belt bag, sandals with socks"
+      }
+    },
+    "accessory": {
+      "acc_none": {
+        "look": "no accessories"
+      },
+      "acc_glasses": {
+        "look": "rimless glasses"
+      },
+      "acc_headphones": {
+        "look": "large black over-ear headphones"
+      },
+      "acc_jewelry": {
+        "look": "layered silver chain necklaces"
+      },
+      "acc_hat": {
+        "look": "faded black baseball cap"
+      },
+      "acc_bag": {
+        "look": "brown suede top-handle bag"
+      }
+    },
+    "gender": {
+      "female": {
+        "look": "woman"
+      },
+      "male": {
+        "look": "man"
+      },
+      "trans_man": {
+        "look": "trans man"
+      },
+      "trans_woman": {
+        "look": "trans woman"
+      },
+      "non_binary": {
+        "look": "androgynous non-binary person"
+      }
+    },
+    "height": {
+      "h_average": {
+        "look": "average height"
+      },
+      "h_tall": {
+        "look": "tall, long-legged"
+      },
+      "h_very_tall": {
+        "look": "extremely tall and towering, head near the top of the frame"
+      }
+    },
+    "freak_neck": {
+      "neck_normal": {
+        "look": "normal neck"
+      },
+      "neck_column": {
+        "look": "thick column-like neck as wide as the head"
+      },
+      "neck_long": {
+        "look": "conspicuously long swan-like neck"
+      },
+      "neck_short": {
+        "look": "very short neck, head sitting low on the shoulders"
+      }
+    },
+    "skin_tone": {
+      "st_porcelain": {
+        "look": "porcelain pale skin"
+      },
+      "st_fair": {
+        "look": "fair skin"
+      },
+      "st_light": {
+        "look": "light skin"
+      },
+      "st_olive": {
+        "look": "olive skin"
+      },
+      "st_tan": {
+        "look": "tan skin"
+      },
+      "st_brown": {
+        "look": "brown skin"
+      },
+      "st_deep": {
+        "look": "deep brown skin"
+      },
+      "st_ebony": {
+        "look": "dark ebony skin"
+      }
+    }
+  }
+}
