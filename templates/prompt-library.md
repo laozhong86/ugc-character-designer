@@ -64,8 +64,8 @@ CHARACTER (must match exactly in every panel):
 [完整 CHARACTER 段：体型年龄 → 皮肤 → 发型（形状/长度/分缝/刘海/颜色）→ 眼镜 → 胡须 → 脸型特征 → 服装逐件 → 道具位置]
 QUALITY: 85mm lens, sharp focus in every panel, natural skin texture with visible pores, fine hair strands, realistic fabric texture. Accurate, consistent colours across all panels. Clean thin white dividing lines between panels, no text, no labels.
 ```
-- 冒烟验证（2026-10-05）：gpt-image-2.5 纯文生图 + 完整 CHARACTER 段即可得到高一致的 8 格表；但第 8 格"招牌表情"被抹平 → 必须写"clearly different from panel 6"并给强动作词。
-- 比例 16:9（omnimux_image_submit aspectRatio）或 1536x1024（image_generate）。
+- 冒烟验证（2026-10-05 · 云端出图）：gpt-image-2.5 纯文生图 + 完整 CHARACTER 段即可得到高一致的 8 格表；但第 8 格"招牌表情"被抹平 → 必须写"clearly different from panel 6"并给强动作词。
+- 比例：订阅出图（默认）`1536x1024`(设定表) / `1024x1536`(全身)；云端出图（备用）`16:9`(设定表) / `9:16`(全身)。
 
 ## T6 · 场景/UGC 首帧（视频交接用）
 

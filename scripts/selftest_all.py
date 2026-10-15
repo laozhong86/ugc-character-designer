@@ -70,6 +70,20 @@ with tempfile.TemporaryDirectory() as tmp:
     rr = json.loads(run([face, "random", "--seed", "9", "--count", "2", "--slug", "t-rand"], cwd=tmp).stdout)
     if rr["count"] != 2 or not all(os.path.exists(c["files"]["prompt_file"]) for c in rr["candidates"]): fails.append("random --slug did not write projects")
 
+# 1c. default image channel order: subscription first, cloud fallback, CLI guidance intact
+g = uf.gen_call("p", "/tmp/run.png")
+if g["tool"] != "image_generate" or g["args"].get("provider") != "gpt" or g["args"].get("size") != "1024x1536":
+    fails.append("default image channel is not subscription-first")
+if g.get("save_to") != "/tmp/run.png": fails.append("subscription channel lost its copy target")
+if g["fallback"]["tool"] != "omnimux_image_submit" or g["fallback"]["args"].get("model") != "gpt-image-2.5":
+    fails.append("cloud fallback missing or wrong model")
+if g["fallback"]["args"].get("dest") != "/tmp/run.png": fails.append("cloud fallback lost dest")
+if "audioTrack" in json.dumps(g): fails.append("empty audioTrack placeholder reintroduced")
+tools_md = open(os.path.join(SKILL, "references", "generation-tools.md"), encoding="utf-8").read()
+for needle in ("install.sh", "omnimux login", "login status --verify", "OMNIMUX_API_KEY"):
+    if needle not in tools_md: fails.append(f"generation-tools.md lost CLI guidance: {needle}")
+if "flow_image_generate" in tools_md: fails.append("dead multi-candidate channel still referenced")
+
 # 2. lab gates in temp workspace
 with tempfile.TemporaryDirectory() as tmp:
     env = dict(os.environ, UGC_LEDGER=os.path.join(tmp, "ledger.jsonl"))
@@ -111,6 +125,8 @@ for ref in set(re.findall(r"`((?:references|templates|data|scripts|evolution|ass
     if "<" in ref or "*" in ref: continue
     if not os.path.exists(os.path.join(SKILL, ref)): fails.append(f"SKILL.md references missing path {ref}")
 if not skill_md.startswith("---\nname: ugc-character-designer\n"): fails.append("SKILL.md frontmatter name")
+if "订阅出图 → 云端出图" not in skill_md: fails.append("SKILL.md lost the default channel order")
+if "flow_image_generate" in skill_md: fails.append("SKILL.md still references the dead multi-candidate channel")
 
 print(json.dumps({"ok": not fails, "failures": fails}, ensure_ascii=False, indent=1))
 sys.exit(0 if not fails else 1)

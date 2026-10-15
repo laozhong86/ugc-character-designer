@@ -120,8 +120,9 @@ git clone https://github.com/laozhong86/ugc-character-designer.git \
 「把这个角色的发型换成蜂巢髻，脸不要变」
 ```
 
-运行依赖：Python 3.10+（脚本无第三方依赖）；出图需要任意文生图通道
-（OmniMux hub / gpt-image / 即梦 / Nano Banana 均可，`references/generation-tools.md`）。
+运行依赖：Python 3.10+（脚本无第三方依赖）；出图按「订阅出图（ChatGPT / Grok 订阅，默认）→
+OmniMux 云端出图（订阅不可用时接管）→ 引导安装 OmniMux CLI 并登录授权（云端也不可用时）」
+的顺序自动降级，详见 `references/generation-tools.md`。
 
 ---
 

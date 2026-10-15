@@ -350,9 +350,11 @@ def summary(tier, sel, customs=None):
 
 
 def gen_call(prompt, dest):
-    return {"tool": "omnimux_image_submit", "args": {"model": "gpt-image-2.5", "operation": "text_to_image", "aspectRatio": "9:16",
-                                                      "prompt": prompt, "dest": dest, "audioTrack": {}},
-            "fallback": {"tool": "image_generate", "args": {"prompt": prompt, "size": "1024x1536", "quality": "high"}}}
+    """默认订阅出图（不接受落盘目录，产物按 save_to 拷贝）；订阅不可用降级到云端出图。"""
+    return {"tool": "image_generate", "args": {"prompt": prompt, "size": "1024x1536", "quality": "high", "provider": "gpt"},
+            "save_to": dest,
+            "fallback": {"tool": "omnimux_image_submit", "args": {"prompt": prompt, "model": "gpt-image-2.5",
+                                                                  "operation": "text_to_image", "aspectRatio": "9:16", "dest": dest}}}
 
 
 def anchors_of(sel):

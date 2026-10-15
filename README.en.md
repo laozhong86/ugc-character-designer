@@ -129,8 +129,10 @@ Then just talk to any skills-capable agent:
 "Swap her hairstyle to a beehive — keep the face identical"
 ```
 
-Runtime: Python 3.10+ (scripts have zero third-party deps); image output needs any
-text-to-image channel (OmniMux hub / gpt-image / etc. — see `references/generation-tools.md`).
+Runtime: Python 3.10+ (scripts have zero third-party deps); image output degrades in order:
+subscription image generation (ChatGPT / Grok, default) → OmniMux cloud image generation
+(takes over when the subscription is unavailable) → guided OmniMux CLI install plus login
+(when the cloud channel is unavailable too). See `references/generation-tools.md`.
 
 ## Capabilities
 
