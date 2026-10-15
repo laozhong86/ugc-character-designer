@@ -31,7 +31,7 @@ whenToUse: 用户要创建、修改、批量设计 AI 网红或 UGC 角色形象
 | S0 捏脸 | **首轮只问：随机捏脸 / 自定义捏脸 / 随机+锁定**。随机 → `ugc_face.py random --count 3 --slug <slug>`（算法组合 + 自动人设 + 系统提示词 → prompt）并直接按返回的 `generate` 出图；自定义 → `ugc_face.py init/menu/apply` 逐层 L1–L6 锁定（每题含默认项 + 随机 + 自定义输入，上层锁定自动过滤/级联下层，如女性不出现胡须），最后 `prompt --slug` | `ask_user_question`、`ugc_face.py` | 随机：选定 1 个候选；自定义：L1–L6 完成且 `prompt` ok |
 | S1 概念 | 随机模式已在 S0 产出候选+图，跳过；自定义模式若用户要多个方向，再用 `ugc_taxonomy.py diversity` 校验 3 个变体 | `ugc_taxonomy.py diversity/refs` | 用户选定 |
 | S2 角色卡 | `ugc_face.py --slug` 已写好 `character.json`（selection/人设/锚点）；补全或修改后（无项目时 `ugc_lab.py init <slug>`）填 `character.json`（bio×3、vibe、niche、tier、selection、signature、running_bit、motion_personality、drift_guard、originality） | `ugc_lab.py card-check` | **G1** 通过（exit 0） |
-| S3 全身定妆 | 用 `ugc_face.py` 产出的 `prompts/fullbody-N.txt`（或 `ugc_taxonomy.py build --mode signature`）→ 必要时细化 → 生图 9:16 → `display_file` 亲眼看 → `log` + `score` | 生图工具（见下） | **G2** ≥3.8 且无 hard_min 失败 |
+| S3 全身定妆 | 用 `ugc_face.py` 产出的 `prompts/fullbody-N.txt`（或 `ugc_taxonomy.py build --mode signature`）→ 必要时细化 → 生图竖版 9:16（订阅通道取 `1024x1536`）→ 产物落到 `out/` → `display_file` 亲眼看 → `log` + `score` | 生图工具（见下） | **G2** ≥3.8 且无 hard_min 失败 |
 | S4 EDIT | 用户要改：只改一处，模板 T4；无参考通道时用"逐字 CHARACTER 段 + 改目标字段"重跑并 `--parent` 关联 | 同上 | G2-edit（identity_preserved ≥4） |
 | S5 锁定 | 通过的全身图 `ugc_lab.py lock <slug> <run> --role front`；把最终 CHARACTER 段写入 `character.json.character_paragraph` | `ugc_lab.py lock` | 只能锁已通过的 run |
 | S6 设定表 | 模板 T5（16:9；第 8 格招牌表情必须与第 6 格明显不同） | 生图 → score → lock `--role sheet` | **G3** ≥4.0，cross_panel_identity/ref_match ≥4 |
@@ -42,9 +42,11 @@ whenToUse: 用户要创建、修改、批量设计 AI 网红或 UGC 角色形象
 
 ## 生图工具（详见 `references/generation-tools.md`）
 
-1. 主力：`omnimux_image_submit`，`model: gpt-image-2.5`、`operation: text_to_image`、`aspectRatio: 9:16`（设定表 `16:9`）、`dest` 写到 `./ugc-characters/<slug>/out/<run>.png`、`audioTrack: {}`。
-2. 订阅备选：`image_generate`（`size: 1024x1536` / 设定表 `1536x1024`，provider gpt→grok）。
-3. 多候选：`flow_image_generate`（count 1–4）。
+默认顺序：**订阅出图 → 云端出图 → 引导安装授权**。每级失败即降级一次，不原样重跑。
+
+1. 默认：`image_generate`，`size: 1024x1536`（设定表 `1536x1024`）、`quality: high`、provider `gpt`→`grok`；**不收落盘目录**，拿返回值里的路径拷到 `./ugc-characters/<slug>/out/<run>.png` 再打分。
+2. 订阅不可用 → 云端：`omnimux_image_submit`，`model: gpt-image-2.5`、`operation: text_to_image`、`aspectRatio: 9:16`（设定表 `16:9`）、`dest` 为绝对路径。
+3. 云端也不可用 → 引导用户装 OmniMux CLI（`curl -fsSL https://omnimux.ai/install.sh | bash` 或 `npm install -g @omnimux/cli`）、`omnimux login` 登录授权、`omnimux login status --verify` 确认，再重试。
 4. `multi_reference` 当前被网关拒绝（draft）；每会话最多试 1 次，成功即更新工具表 + learnings。
 工具不收 negative 参数 → 把关键负向改写成正向约束句（见 T3）。
 
