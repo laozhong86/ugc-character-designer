@@ -1,226 +1,180 @@
 🌐 **中文** · [English](README.en.md)
 
-> _「说一句话，拿回一个能持续出片的 AI 角色。」_
+# UGC Character Designer · AI 角色设计
+
+**让你的 Agent，设计有记忆点的原创 AI 角色。**
+
+面向海外短视频创作者的角色设计 Skill：从一句人设出发，确定人物经历、外形和招牌动作，
+制作 AI 网红、虚拟博主与 UGC 角色的定妆图、角色设定表和场景参考，为后续图像与视频创作准备资产。
+
+**18 个类目，共 170 个造型选项 · 3 档夸张度 · 随机组合 / 逐层自定义**
+
+先写人，再出脸。让发型、轮廓、穿搭和招牌动作共同表达角色，方便观众在缩略图里认出它。
 
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Agent-Agnostic](https://img.shields.io/badge/Agent-Agnostic-blueviolet)](https://skills.sh/)
+[![Agent Skill](https://img.shields.io/badge/Agent-Skill-blueviolet)](SKILL.md)
 [![170 Options](https://img.shields.io/badge/Taxonomy-170%20options-orange)](assets/index.json)
 
-**在你的 agent 里说一句"做个 AI 网红"，拿回一套能直接进短视频生产线的角色资产包。**
+[看设计方向](#设计方向海外角色参考) · [能做什么](#你说它做) · [安装与开始](#安装与首次使用) · [制作流程](#制作流程) · [使用边界](#使用边界)
 
-设计原创、缩略图一眼可辨、可持续出片的 AI 网红 / 虚拟博主 / UGC 角色：
-三句人设 → 170 项形象分类数据（3 档夸张度）→ 全身定妆图 → EDIT 保脸修改 →
-8 格角色设定表 → 场景首帧 → 交接包。内置规则引擎校验、视觉打分门禁（G1–G4）、
-验收报告与自进化账本。
+## 设计方向：海外角色参考
 
-核心信条：**先写人，再出脸** —— 一个招牌发型 + 一个突出特征 + 老派真诚着装 +
-全程面无表情；缩略图辨识 > 精致度；锁定参考后一切以它为准；原创，绝不借脸。
-
-[看效果](#-画廊) · [安装](#装上就能用) · [能做什么](#能做什么) · [工作流](#s0s8-阶段门禁) · [仓库结构](#仓库结构)
-
----
-
-## 🎨 画廊
-
-### 角色案例 · Showcase
+以下素材收集自 [OmniMux「灵感库 → AI 达人」](https://omnimux.ai/influencer)，用来说明本项目关注的海外 AI 网红角色设计方向。
+**它们是外部设计参考，不是本 Skill 的生成结果，也不代表角色属于本项目。**
 
 <table>
 <tr>
-<td width="280">
-<img src="gallery/characters/jiang-lingyi-fullbody.png" width="260">
-</td>
-<td valign="top">
-
-**姜令仪 · jiang-lingyi** —— 架空古装权谋短剧女主
-
-- 三句人设：边境小国 26 岁和亲公主，入京议亲；用婚约与外交谈判换取停战、
-  运粮与边民生存；她相信个人体面可以让步，百姓性命不是筹码。
-- 招牌：黑色中分低盘辫髻 + 浅绿小玉耳坠 + 黛青长衫配杏色交领；
-  左袖藏一袋故乡种子（不举在手里）。
-- 招牌梗：受压时先理平袖口，再用平稳语气问回被回避的问题。
-- 定妆图 G2 评分 **4.37 / 5**（一次通过）。
-
-</td>
+<td width="33%" valign="top"><img src="gallery/overseas/jean-phil.webp" width="250" alt="Jean Phil：铂金波波头、细胡须与棕格西装"><br><strong>Jean Phil · 发型与穿搭</strong><br>铂金波波头、细胡须与棕格西装，建立清晰的视觉锚点。</td>
+<td width="33%" valign="top"><img src="gallery/overseas/brigitte-macaron.webp" width="250" alt="Brigitte Macaron：金色短波波头、圆眼镜与淡紫套装"><br><strong>Brigitte Macaron · 配色与配饰</strong><br>金色短波波头、圆眼镜与淡紫套装，让细节共同表达角色。</td>
+<td width="33%" valign="top"><img src="gallery/overseas/leopold.webp" width="250" alt="Léopold：橄榄绿帽装、蓬松长发与高筒靴"><br><strong>Léopold · 整体剪影</strong><br>橄榄绿帽装、蓬松长发与高筒靴，让全身造型也有辨识度。</td>
 </tr>
 </table>
 
-更多角色案例见 [gallery/README.md](gallery/README.md)。
+本项目聚焦 TikTok、Reels、Shorts 等海外短视频中的**原创角色设计**：
+可以是一本正经的吐槽者、造型鲜明的生活博主，也可以是有固定动作与口头禅的 UGC 人物。
+复古穿搭、面无表情是其中一种梗角色配方；角色的表情、气质和服装应服务于具体人设。
+当前内置流程以 deadpan 梗角色为主要起点；其他表演方向的验收范围见下方使用边界。
 
-### 行业对标 · Benchmark（外部参考，非本 skill 产出）
+[素材来源](gallery/overseas/SOURCES.md) · [更多角色参考](gallery/README.md) · [浏览 170 项造型元素](gallery/taxonomy.md)
 
-我们拿 Higgsfield 等一线 AI influencer 的角色设定表当水位线校准质量门禁——
-共同规律正是本 skill 的信条：**招牌发型 + 突出特征 + 老派着装 + 面无表情**。
+## 你说，它做
 
-<table>
-<tr>
-<td><img src="gallery/references/sheet-mushroom-hat-man.jpg" width="200"><br><sub>蘑菇帽：招牌发型极简</sub></td>
-<td><img src="gallery/references/sheet-yapper-kid.jpg" width="200"><br><sub>螺旋桨帽：一件单品讲完人设</sub></td>
-<td><img src="gallery/references/sheet-lavender-suit-mustache.jpg" width="200"><br><sub>薰衣草西装 + 翘胡</sub></td>
-<td><img src="gallery/references/sheet-emo-bodybuilder.jpg" width="200"><br><sub>遮眼长发 + 肌肉反差</sub></td>
-</tr>
-</table>
+| 你的需求 | Skill 帮你完成 |
+|---|---|
+| “我想做海外 AI 账号，还没想好角色长什么样。” | 随机组合人设与造型，生成候选方向；也可以先锁定部分特征再随机。 |
+| “我想自己选轮廓、五官、发型和穿搭。” | 按层选择外形，检查组合冲突，并保留已经确定的选择。 |
+| “这个人是谁？为什么观众会记住它？” | 整理三句人设、内容赛道、外形锚点、招牌动作与避免漂移的规则，写入角色卡。 |
+| “把选中的方向做成后续出图的参考。” | 生成全身定妆图，确认后再制作 8 格设定表（5 张全身 + 3 张特写）。 |
+| “换个造型，尽量保持角色身份。” | 沿用锁定描述修改指定特征，再检查人物身份和未修改部分。 |
+| “看看它换个场景还能不能认出来。” | 制作 1–3 张 UGC 场景首帧，复核一致性，整理图片、提示词与验收记录。 |
 
-全部 13 张对标图 → [gallery/README.md#行业对标](gallery/README.md)
+完整流程的目标交付物：**角色卡 → 全身定妆图 → 8 格设定表 → 场景参考 → 交接包**。
+交付以实际生成并通过检查的阶段为准；视频生成与发布由后续工具完成。
 
-### 📹 视频案例 · Jean Phil 事件（本 skill 的现实背景）
+## 安装与首次使用
 
-金发翘胡 + 薰衣草西装的 AI 角色两周内单条 **36M 播放**、衍生 token 手续费约 **$235K**，
-对手角色 Derek Mercer 以相反轮廓复制爆发，Higgsfield 官方亲自下场——
-本 skill 的方法论（先写人再出脸 / 招牌发型 + 突出特征 + 老派着装 + 面无表情 /
-锁定即宪法）正是这类爆款公式的工程化。
-
-👉 **[完整拆解 + 5 条视频存档 · gallery/case-study-jean-phil.md](gallery/case-study-jean-phil.md)**
-（熟脸+招牌动作+新场景 = 无限格式 · "真人还是AI"悬念 · 平台放大飞轮 · $200-300 成本账）
-
-### 元素画廊 · 170 项形象分类
-
-18 个类目 × 170 个选项，每个元素一张独立单图（禁止拼图）——
-发型 26 款（含蜂巢头、灯罩头、螺旋卷、台阶头等招牌款）、面部特征 25 项、
-肤色 8 档、风格 8 系。三档夸张度：Average / Bold / Extreme。
-
-👉 **[完整画廊 · gallery/taxonomy.md](gallery/taxonomy.md)**（自动生成，可检索）
-
-<table>
-<tr>
-<td><img src="assets/options/hair/hs_beehive.webp" width="110"><br><sub>蜂巢髻</sub></td>
-<td><img src="assets/options/hair/hs_lampshade.webp" width="110"><br><sub>灯罩头</sub></td>
-<td><img src="assets/options/hair/hs_softserve.webp" width="110"><br><sub>冰淇淋卷</sub></td>
-<td><img src="assets/options/hair/hs_stairs.webp" width="110"><br><sub>台阶头</sub></td>
-<td><img src="assets/options/hair/hs_sphere.webp" width="110"><br><sub>球型发</sub></td>
-<td><img src="assets/options/hair/hs_horns.webp" width="110"><br><sub>双角髻</sub></td>
-</tr>
-<tr>
-<td><img src="assets/options/distinctive/df_hetero.webp" width="110"><br><sub>异色瞳</sub></td>
-<td><img src="assets/options/distinctive/df_gems.webp" width="110"><br><sub>面部宝石</sub></td>
-<td><img src="assets/options/freak_face/ff_nose_1.webp" width="110"><br><sub>夸张鼻 1</sub></td>
-<td><img src="assets/options/freak_head/head_megachin.webp" width="110"><br><sub>巨型下巴</sub></td>
-<td><img src="assets/options/aesthetic/theatrical.webp" width="110"><br><sub>戏剧风</sub></td>
-<td><img src="assets/options/aesthetic/y2k.webp" width="110"><br><sub>Y2K</sub></td>
-</tr>
-</table>
-
----
-
-## 装上就能用
-
-这是一个标准的 agent skill（含 `SKILL.md` + `assets/` + `data/` + `references/` +
-`scripts/` + `templates/` + `evolution/` 子目录，缺一不可）。克隆到任意 skills 目录：
+将完整仓库克隆到你的 Agent 支持的 skills 目录，例如：
 
 ```bash
 git clone https://github.com/laozhong86/ugc-character-designer.git \
-  ~/.agents/skills/ugc-character-designer      # 或你的 agent skills 目录
+  ~/.agents/skills/ugc-character-designer
 ```
 
-然后在支持 skills 的 agent 里直接说话：
+保留 `SKILL.md` 及其 `assets/`、`data/`、`references/`、`scripts/`、`templates/`、`evolution/`
+目录。让 Agent 按所用宿主的方式加载此 Skill，然后从一个具体需求开始：
 
-```
-「帮我做一个 AI 网红」
-「随机捏脸 3 个，我要做 TikTok 宠物吐槽账号」
-「基于这个定妆图做 8 格角色设定表」
-「把这个角色的发型换成蜂巢髻，脸不要变」
-```
-
-运行依赖：Python 3.10+（脚本无第三方依赖）；出图按「订阅出图（ChatGPT / Grok 订阅，默认）→
-OmniMux 云端出图（订阅不可用时接管）→ 引导安装 OmniMux CLI 并登录授权（云端也不可用时）」
-的顺序自动降级，详见 `references/generation-tools.md`。
-
----
-
-## 能做什么
-
-| 能力 | 交付物 | 门禁 |
-|---|---|---|
-| 随机捏脸 | 3 个候选角色（人设 + 全身图 + prompt） | 用户选 1 |
-| 分层自定义捏脸 | L1–L6 六层锁定（性别→族裔→轮廓→五官→发型→风格），上层锁定自动过滤下层 | 每层确认 |
-| 角色卡 | `character.json`（bio×3 / vibe / 招牌 / 动作人格 / 漂移护栏 / 原创性声明） | **G1** |
-| 全身定妆图 | 9:16 定妆图 + 视觉打分 | **G2 ≥3.8** |
-| EDIT 保脸修改 | 只改一处、其余逐字锁定的重跑 | identity ≥4 |
-| 8 格设定表 | 16:9 设定表（5 全身 + 3 特写） | **G3 ≥4.0** |
-| 场景首帧 | 1–3 张 9:16 UGC 首帧，验证换场景仍是同一人 | **G4** |
-| 交接包 | 视频动作迁移所需的全部锚点 + acceptance.md | 全绿 |
-| 自进化 | 失败模式汇总 → 经验规则 promote 进 `evolution/learnings.md` | ≥2 证据 run |
-
-## S0→S8 阶段门禁
-
-```
-S0 捏脸 ─→ S1 概念 ─→ S2 角色卡 ─→ S3 全身定妆 ─→ S4 EDIT ─→ S5 锁定
-                                                              │
-S8 交付 ←─ G4 场景 ←─ G3 设定表 ←─────────────────────────────┘
+```text
+帮我设计一个面向海外短视频的原创 AI 角色。
+内容方向是用过分认真的态度点评日常小事。先给我 3 个不同的造型方向。
 ```
 
-- **分数只来自亲眼看到的生成图**——逐项对照 `data/qa-rubric.json`，绝不凭 prompt 打分。
-- 失败必须打 `failure_tags`（rubric 内置修复建议），下一次按建议改 prompt，禁止原样重跑。
-- 每阶段最多 3 次不同尝试，仍不过 → 向用户说明卡点与选项，不假装完成。
+也可以这样开始：
 
-## 核心机制
+```text
+我要逐层选外形，做一个风格鲜明的虚拟生活博主。
+保留这个角色的轮廓和发型，换一套适合街头采访的衣服。
+基于选定的定妆图，继续做 8 格设定表和两个日常场景。
+```
 
-### 数据驱动，不默认本土化
+**需要什么：** Python 3.10+（脚本无第三方依赖），以及能加载 Skill、运行脚本和查看图片的 Agent。
+实际出图还需要宿主提供可用的生图工具与相应账号或额度；安装 Skill 不会自动获得生图服务。
+当前工具路由、OmniMux 接入方式与一致性限制见 [生图工具指南](references/generation-tools.md)。
+角色项目默认写入你当前工作区的 `ugc-characters/<slug>/`。
 
-对话用中文 ≠ 角色是中国人。族裔、风格、档位来自用户回答或数据内置随机权重；
-未指定时概念必须覆盖多种族裔（`ugc_taxonomy.py diversity --market global` 硬门禁）。
+## 制作流程
 
-### 单元素图协议
+1. **确定方向。** 从随机组合、逐层自定义或“锁定部分特征后随机”开始，选择角色概念。
+2. **先写人物。** 明确经历、内容赛道、性格、外形锚点与招牌动作，检查角色卡。
+3. **制作定妆图。** 生成全身图，查看实际图片后检查辨识度、原创性和画面质量；需要时修改。
+4. **锁定参考。** 保存通过检查的图片和角色描述，作为后续修改与出图的身份依据。
+5. **扩展角色资产。** 制作 8 格设定表，按需增加场景首帧，检查跨图一致性。
+6. **整理交接。** 输出角色卡、图片、提示词与验收报告，记录已通过和仍需处理的问题。
 
-170 个选项每个一张独立 webp 参考图（`assets/options/<category>/<id>.webp`），
-展示与参考一律逐张单图，**禁止拼图/联系表**——拼图会让模型在出图时混入错误元素。
+### 怎样检查质量
 
-### 锁定即宪法
+| 阶段 | 检查内容 |
+|---|---|
+| G1 · 角色卡 | 必填字段、造型组合、人设与原创性声明。 |
+| G2 · 定妆图 | 按视觉量表评分，均分至少 3.8/5，并满足单项要求。修改图另查身份保留。 |
+| G3 · 8 格设定表 | 均分至少 4.0/5，跨格身份与参考匹配等关键项达到要求。 |
+| G4 · 场景参考 | 检查人物换场景后的身份、造型与画面表现。 |
 
-定妆图通过后 `ugc_lab.py lock`，最终 CHARACTER 段落写进 `character.json`；
-之后所有出图（设定表/场景/EDIT）都以它为身份锚点，修改只能走 EDIT 流程。
+**视觉分数由 Agent 查看实际生成图后逐项判断并录入。** 脚本负责字段、阈值与记录校验，
+不自动看图，也不保证审美判断准确。每个阶段最多进行 3 次不同尝试；未通过时说明问题和可选调整。
+详细流程见 [SKILL.md](SKILL.md)，评分项见 [质量量表](data/qa-rubric.json)。
 
-### 自进化账本
+### 造型数据与经验记录
 
-每次生成 `ugc_lab.py log` → 看图 → `score`；交付 `accept`；复盘 `evolve` 汇总失败模式，
-经用户同意以 ≥2 个证据 run `promote` 进 `evolution/learnings.md`——
-skill 会越用越准。
+- **多种角色方向。** 18 个类目，共 170 个选项，包含发型、面部特征、肤色、配饰和审美风格；
+  Average / Bold / Extreme 三档夸张度支持不同强度的设计。中文对话不默认生成中国角色。
+- **逐项查看参考。** 每个造型元素有独立参考图，组合时使用视觉描述与兼容规则，避免只靠抽象标签。
+- **沿用身份锚点。** 锁定后保存最终角色描述，后续修改、设定表与场景继续引用，并重新看图复核。
+- **记录失败经验。** 账本保存生成记录、评分和失败标签；经验规则需要证据支持后才沉淀。
+  这是一套复盘机制，质量仍需逐次验证。
 
-## 硬约束
+## 使用边界
 
-- **原创**：不做真人/名人/网红/版权角色的相似形象；要求"像某某" → 婉拒并提供原创替代。
-- 幽默来自造型、姿态、态度；绝不嘲弄种族、身材、性别认同、背景。
-- 不承诺收益；平台激励条款以官方为准。
+- **表演方向仍有范围。** 当前随机角色卡、signature 提示词与 G1/G2 验收主要适配 deadpan／严肃角色；
+  大笑、眨眼等其他表演方向尚未完成完整验收适配，不能仅修改提示词就视为标准流程已支持。
+- **一致性依赖生图通道。** 没有可用参考图编辑时，主要沿用角色文字描述生成，脸部细节仍可能漂移；
+  换装和 8 格设定表都需要看图复核，Extreme 档尤其如此。
+- **公开案例仍有限。** 当前公开的本 Skill 产出是姜令仪的全身定妆图，见下方历史案例；
+  首页海外角色均为设计参考，尚未作为本 Skill 的完整生成验收案例。
+- **设计原创形象。** 不复刻真人、名人、已有网红或版权角色的相似形象。幽默来自造型、姿态和态度，
+  不以种族、身材、性别认同或背景为嘲弄对象。
+- **交付角色资产。** 本项目不直接完成视频拍摄、动作迁移、账号运营或发布，也不承诺播放量与收益。
 
-## 脚本速查
+## 案例与方法来源
+
+**历史产出 · 姜令仪。** 一位架空古装权谋短剧角色，现公开一张
+[全身定妆图](gallery/characters/jiang-lingyi-fullbody.png)。它用于保留早期角色设计记录；
+首页优先展示面向海外短视频的设计方向。更多背景见 [画廊](gallery/README.md)。
+
+方法来自角色设计资料与案例研究，造型数据来自 OmniMux influencer taxonomy：
+
+- [方法论蒸馏与原始资料](references/research-distillation.md)：人设、辨识锚点、动作与角色复用。
+- [Jean Phil 案例研究](gallery/case-study-jean-phil.md)：外部角色与传播方式的历史分析，相关数字以原始来源和记录时间为准。
+- [造型元素画廊](gallery/taxonomy.md)：170 个选项的单图索引。
+
+## 开发与目录
+
+Agent 的执行入口是 [SKILL.md](SKILL.md)。对话设计见 [问询流程](references/intake-questions.md)，
+图像提示词见 [模板库](templates/prompt-library.md)。
+
+<details>
+<summary>脚本速查与仓库结构</summary>
+
+脚本路径相对仓库根目录。创建角色时，在目标工作区运行脚本并使用 Skill 的绝对路径，
+角色文件会写入当前工作区。以下为命令速查，子命令的参数见各自 `--help`：
 
 ```bash
-S=scripts
-python3 $S/ugc_face.py random --count 3 --slug <slug>     # 随机捏脸 → prompt + 生图参数
-python3 $S/ugc_face.py init|menu|apply|prompt --state <face-state.json> --layer L1..L6
-python3 $S/ugc_taxonomy.py find "horn" | get hair/hs_horns | refs --sel @sel.json
-python3 $S/ugc_taxonomy.py diversity --tier freak --sels '[s1,s2,s3]' --market global
-python3 $S/ugc_lab.py init|card-check|log|score|lock|accept|evolve|promote
-python3 $S/build_gallery.py   # 重建 gallery/taxonomy.md
-python3 $S/selftest_all.py    # 改动 skill 后的回归（必须全绿）
+python3 scripts/ugc_face.py --help
+python3 scripts/ugc_taxonomy.py find "horn"
+python3 scripts/ugc_lab.py --help
+python3 scripts/build_gallery.py   # 重建元素画廊
+python3 scripts/selftest_all.py    # 数据、规则、阶段门槛与 Skill 引用路径
 ```
 
-## 仓库结构
+- `ugc_face.py`：随机组合与分层自定义（`random` / `init` / `menu` / `apply` / `prompt`）。
+- `ugc_taxonomy.py`：元素检索、组合校验与提示词构建（`find` / `get` / `refs` / `diversity` / `build`）。
+- `ugc_lab.py`：角色卡、生成记录、评分、锁定、验收与经验记录（`init` / `card-check` / `log` / `score` / `lock` / `accept` / `evolve` / `promote`）。
 
-```
+```text
 ugc-character-designer/
-├── SKILL.md                # 主文档（给 agent 读）：S0–S8 阶段门禁
+├── SKILL.md                # Agent 执行流程
 ├── README.md / README.en.md
-├── assets/
-│   ├── index.json          # 170 条元素索引（label/fragment/look/tier/单图路径）
-│   └── options/<cat>/<id>.webp   # 170 张单元素图 + 6 张档位图
-├── data/                   # taxonomy.json / 视觉描述 / 中文标签 / QA rubric / 规则
-├── references/             # 方法论蒸馏 / 捏脸题库 / 生图工具坑 / 原文证据
-├── scripts/                # ugc_face.py / ugc_taxonomy.py / ugc_lab.py / build_gallery.py
-├── templates/              # 角色卡模板 / prompt 模板库 T1–T7
-├── evolution/              # learnings.md（已证实规则）+ ledger.jsonl（账本）
-└── gallery/                # 展示画廊：角色案例 + taxonomy.md 元素全览
+├── assets/                 # 元素索引与单元素参考图
+├── data/                   # 造型数据、视觉描述、评分量表与规则
+├── references/             # 方法、问询流程、生图指南与原始来源
+├── scripts/                # 组合、校验、记录和画廊工具
+├── templates/              # 角色卡与提示词模板
+├── evolution/              # 经验规则与运行账本
+└── gallery/                # 海外设计参考、历史案例与元素画廊
 ```
 
-## Limitations
-
-- **出图质量取决于文生图通道**：multi-reference 一致性编辑在多数网关仍是 draft；
-  当前用"逐字 CHARACTER 段 + 文生图"保脸，极端情况下跨图一致性会漂。
-- **不做真人相似**：任何"做得像某明星/某网红"的请求都会被拒绝并转原创替代。
-- 8 格设定表对极端档位（Extreme）角色的跨格一致性仍是难点，可能需要 2–3 次迭代。
-
-这是一个让"AI 角色"从一次性图片变成可持续生产资产的 skill——
-角色负责差异，格式负责分发。
+</details>
 
 ## License
 
-[MIT](LICENSE) — 自由使用、修改、分发，包括商业用途。
+代码与文档采用 [MIT](LICENSE)。画廊中的外部参考素材保留原作者权利，来源与用途说明见
+[画廊](gallery/README.md)。

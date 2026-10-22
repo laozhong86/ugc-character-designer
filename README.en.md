@@ -1,231 +1,200 @@
 🌐 [中文](README.md) · **English**
 
-> _"Say one sentence. Get back an AI character that can keep shipping content."_
+# UGC Character Designer
+
+**Give your Agent a brief. Design an original AI character people can recognize.**
+
+A character-design Skill for creators making short videos for global audiences. Start with a persona,
+define their appearance and signature behavior, then build portraits, character sheets and scene
+references for AI influencers, virtual creators and UGC characters.
+
+**170 appearance options across 18 categories · 3 exaggeration tiers · Random or guided customization**
+
+Write the person first, then the face. Connect hairstyle, silhouette, outfit and signature actions
+so the character stays recognizable in a thumbnail.
 
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Agent-Agnostic](https://img.shields.io/badge/Agent-Agnostic-blueviolet)](https://skills.sh/)
+[![Agent Skill](https://img.shields.io/badge/Agent-Skill-blueviolet)](SKILL.md)
 [![170 Options](https://img.shields.io/badge/Taxonomy-170%20options-orange)](assets/index.json)
 
-**Say "make me an AI influencer" in your agent, get back a complete character asset pack ready for a short-video pipeline.**
+[Design direction](#design-direction-global-character-references) · [What it does](#you-say-the-skill-helps-you) · [Get started](#installation-and-first-use) · [Workflow](#workflow) · [Limitations](#limitations)
 
-Design original, thumbnail-instantly-recognizable, sustainably-producible AI influencers /
-virtual creators / UGC characters: three-line persona → 170-option appearance taxonomy
-(3 exaggeration tiers) → full-body character portrait → EDIT face-preserving revisions →
-8-panel character sheet → scene first-frames → handoff package. Built-in rule-engine
-validation, visual scoring gates (G1–G4), acceptance reports, and a self-evolution ledger.
+## Design direction: global character references
 
-Core creed: **write the person first, then the face** — one signature hairstyle +
-one standout feature + sincere unfashionable outfit + deadpan throughout;
-thumbnail recognizability > polish; once a reference is locked, everything defers to it;
-original only — never borrow a real face.
-
-[Gallery](#-gallery) · [Install](#install) · [Capabilities](#capabilities) · [Workflow](#s0s8-gated-workflow) · [Repo layout](#repo-layout)
-
----
-
-## 🎨 Gallery
-
-### Character showcase
+These images were collected from [OmniMux's Inspiration Library → AI Influencers](https://omnimux.ai/influencer)
+to show this project's direction for AI creator character design. **They are external references, not outputs of this Skill.
+The featured characters do not belong to this project.**
 
 <table>
 <tr>
-<td width="280">
-<img src="gallery/characters/jiang-lingyi-fullbody.png" width="260">
-</td>
-<td valign="top">
-
-**Jiang Lingyi** — female lead of an original costume political-drama short series
-
-- Persona: a 26-year-old peace-marriage princess from a border kingdom;
-  she trades her marriage for ceasefire, grain convoys and her people's survival;
-  she believes her own dignity is negotiable — her people's lives are not.
-- Signature: black center-parted low braided bun + pale-green jade earrings +
-  teal robe over apricot dress; a cloth pouch of hometown seeds hidden in her left sleeve.
-- Running bit: under pressure, she first smooths her sleeve, then calmly re-asks
-  the question that was dodged.
-- Full-body gate score **4.37 / 5** (passed first try).
-
-</td>
+<td width="33%" valign="top"><img src="gallery/overseas/jean-phil.webp" width="250" alt="Jean Phil: platinum bob, thin mustache and brown checked suit"><br><strong>Jean Phil · Hair and styling</strong><br>A platinum bob, thin mustache and brown checked suit establish clear visual anchors.</td>
+<td width="33%" valign="top"><img src="gallery/overseas/brigitte-macaron.webp" width="250" alt="Brigitte Macaron: short blond bob, round glasses and pale lavender suit"><br><strong>Brigitte Macaron · Color and accessories</strong><br>A short blond bob, round glasses and pale lavender suit give the design a coherent identity.</td>
+<td width="33%" valign="top"><img src="gallery/overseas/leopold.webp" width="250" alt="Léopold: olive-green hat and outfit, voluminous long hair and tall boots"><br><strong>Léopold · Full-body silhouette</strong><br>An olive-green hat and outfit, voluminous hair and tall boots create a recognizable silhouette.</td>
 </tr>
 </table>
 
-More in [gallery/README.md](gallery/README.md).
+The focus is **original character design** for TikTok, Reels, Shorts and similar short-video formats:
+a straight-faced commentator, a distinctive lifestyle creator, or a UGC persona with recurring gestures
+and catchphrases. Retro outfits and deadpan expressions are one recipe for a comedy character;
+clothing, expressions and attitude should serve the individual persona. The built-in workflow
+currently centers on deadpan characters; see the limitations below for other performance directions.
 
-### Industry benchmarks (external references — not our output)
+[Image sources](gallery/overseas/SOURCES.md) · [More character references](gallery/README.md) · [Browse all 170 appearance options](gallery/taxonomy.md)
 
-We calibrate the quality gates against top-tier AI-influencer character sheets
-(Higgsfield et al.). Their shared pattern is exactly this skill's creed:
-**signature hair + standout feature + sincere outfit + deadpan face**.
+## You say, the Skill helps you
 
-<table>
-<tr>
-<td><img src="gallery/references/sheet-mushroom-hat-man.jpg" width="200"><br><sub>mushroom hat: minimal signature</sub></td>
-<td><img src="gallery/references/sheet-yapper-kid.jpg" width="200"><br><sub>propeller cap: one item = persona</sub></td>
-<td><img src="gallery/references/sheet-lavender-suit-mustache.jpg" width="200"><br><sub>lavender suit + curled mustache</sub></td>
-<td><img src="gallery/references/sheet-emo-bodybuilder.jpg" width="200"><br><sub>emo hair × muscle contrast</sub></td>
-</tr>
-</table>
+| Your brief | What the Skill helps you do |
+|---|---|
+| “I want an AI creator, but I don't know what they should look like.” | Generate character concepts with randomized personas and styling, optionally keeping chosen features fixed. |
+| “I want to pick the silhouette, face, hair and outfit myself.” | Choose appearance in layers, check conflicting combinations and retain confirmed choices. |
+| “Who is this person, and why would anyone remember them?” | Write a three-line persona, content niche, visual anchors, signature behavior and rules to avoid drift in a character card. |
+| “Turn this concept into references for future images.” | Generate a full-body portrait, then an 8-panel character sheet with 5 full-body views and 3 close-ups. |
+| “Change the styling while keeping the character recognizable.” | Reuse the locked description, revise the requested features and check identity and unchanged details. |
+| “Can I still recognize them in a different setting?” | Create 1–3 UGC scene first-frames, inspect consistency and organize images, prompts and acceptance records. |
 
-All 13 benchmark images → [gallery/README.md](gallery/README.md)
+The full workflow aims to deliver a **character card → full-body portrait → 8-panel sheet → scene
+references → handoff package**. Delivery reflects the stages actually generated and checked;
+video generation and publishing happen in downstream tools.
 
-### 📹 Video cases · the Jean Phil phenomenon (this skill's real-world backdrop)
+## Installation and first use
 
-A blond curled-mustache AI character in a lavender suit hit **36M views** on a single
-clip within two weeks, with ~$235K in derived token creator fees; rival character
-Derek Mercer (face-covering black hair × exaggerated muscles) replicated the breakout
-with the opposite silhouette, and Higgsfield itself piled in. This skill's method
-(persona-first / signature hair + standout feature + sincere outfit + deadpan /
-lock-is-law) is that viral formula turned into an engineering pipeline.
-
-👉 **[Full breakdown + 5 archived videos · gallery/case-study-jean-phil.md](gallery/case-study-jean-phil.md)**
-(familiar face + signature move + new setting = infinite format · "real or AI" suspense ·
-platform-amplification flywheel · the $200–300 cost math)
-
-### Element gallery · 170-option taxonomy
-
-18 categories × 170 options, one standalone image per element (composites forbidden) —
-26 hairstyles (beehive, lampshade, corkscrews, staircase…), 25 facial features,
-8 skin tones, 8 aesthetics. Three exaggeration tiers: Average / Bold / Extreme.
-
-👉 **[Full gallery · gallery/taxonomy.md](gallery/taxonomy.md)** (auto-generated, searchable)
-
-<table>
-<tr>
-<td><img src="assets/options/hair/hs_beehive.webp" width="110"><br><sub>beehive</sub></td>
-<td><img src="assets/options/hair/hs_lampshade.webp" width="110"><br><sub>lampshade</sub></td>
-<td><img src="assets/options/hair/hs_softserve.webp" width="110"><br><sub>soft-serve</sub></td>
-<td><img src="assets/options/hair/hs_stairs.webp" width="110"><br><sub>staircase</sub></td>
-<td><img src="assets/options/hair/hs_sphere.webp" width="110"><br><sub>sphere</sub></td>
-<td><img src="assets/options/hair/hs_horns.webp" width="110"><br><sub>horns</sub></td>
-</tr>
-<tr>
-<td><img src="assets/options/distinctive/df_hetero.webp" width="110"><br><sub>heterochromia</sub></td>
-<td><img src="assets/options/distinctive/df_gems.webp" width="110"><br><sub>face gems</sub></td>
-<td><img src="assets/options/freak_face/ff_nose_1.webp" width="110"><br><sub>nose +1</sub></td>
-<td><img src="assets/options/freak_head/head_megachin.webp" width="110"><br><sub>mega chin</sub></td>
-<td><img src="assets/options/aesthetic/theatrical.webp" width="110"><br><sub>theatrical</sub></td>
-<td><img src="assets/options/aesthetic/y2k.webp" width="110"><br><sub>Y2K</sub></td>
-</tr>
-</table>
-
----
-
-## Install
-
-A standard agent skill (`SKILL.md` + `assets/`, `data/`, `references/`, `scripts/`,
-`templates/`, `evolution/` — all required). Clone into any skills directory:
+Clone the complete repository into a skills directory supported by your Agent, for example:
 
 ```bash
 git clone https://github.com/laozhong86/ugc-character-designer.git \
-  ~/.agents/skills/ugc-character-designer      # or your agent's skills dir
+  ~/.agents/skills/ugc-character-designer
 ```
 
-Then just talk to any skills-capable agent:
+Keep `SKILL.md` and the `assets/`, `data/`, `references/`, `scripts/`, `templates/` and `evolution/`
+directories together. Load the Skill through your Agent's host, then start with a concrete brief:
 
-```
-"Make me an AI influencer"
-"Random-generate 3 faces, I'm running a TikTok pet-rant account"
-"Build an 8-panel character sheet from this locked portrait"
-"Swap her hairstyle to a beehive — keep the face identical"
-```
-
-Runtime: Python 3.10+ (scripts have zero third-party deps); image output degrades in order:
-subscription image generation (ChatGPT / Grok, default) → OmniMux cloud image generation
-(takes over when the subscription is unavailable) → guided OmniMux CLI install plus login
-(when the cloud channel is unavailable too). See `references/generation-tools.md`.
-
-## Capabilities
-
-| Capability | Deliverable | Gate |
-|---|---|---|
-| Random face-gen | 3 candidates (persona + full-body + prompt) | user picks 1 |
-| Layered custom face-gen | L1–L6 lock-down (gender→ethnicity→silhouette→features→hair→style); upper locks cascade-filter lower layers | per-layer confirm |
-| Character card | `character.json` (bio×3 / vibe / signature / motion personality / drift guard / originality) | **G1** |
-| Full-body portrait | 9:16 key art + visual scoring | **G2 ≥3.8** |
-| EDIT revision | one-change rerun with verbatim face lock | identity ≥4 |
-| 8-panel sheet | 16:9 sheet (5 full-body + 3 close-ups) | **G3 ≥4.0** |
-| Scene first-frames | 1–3 × 9:16 UGC frames, same-person verification across scenes | **G4** |
-| Handoff package | all anchors needed for video motion transfer + acceptance.md | all green |
-| Self-evolution | failure-pattern rollup → rules promoted into `evolution/learnings.md` | ≥2 evidence runs |
-
-## S0→S8 gated workflow
-
-```
-S0 face-gen ─→ S1 concept ─→ S2 character card ─→ S3 full-body ─→ S4 EDIT ─→ S5 lock
-                                                                              │
-S8 delivery ←─ G4 scenes ←─ G3 sheet ←────────────────────────────────────────┘
+```text
+Design an original AI character for short videos aimed at a global audience.
+They review everyday things with excessive seriousness. Give me 3 distinct visual directions first.
 ```
 
-- **Scores come only from actually-viewed generated images** — item-by-item against
-  `data/qa-rubric.json`; never score a prompt, never score a file that isn't on disk.
-- Failures must carry `failure_tags` (the rubric embeds fix suggestions); the next
-  attempt revises the prompt per those suggestions — identical reruns are banned.
-- Max 3 distinct attempts per stage; still failing → tell the user the blocker, don't fake it.
+Other starting points:
 
-## Key mechanisms
-
-### Data-driven, never defaults to localization
-
-A Chinese-language conversation does NOT mean a Chinese character. Ethnicity, style
-and tier come from user answers or built-in random weights; unspecified concepts must
-span multiple ethnicities (`ugc_taxonomy.py diversity --market global` hard gate).
-
-### Single-element image protocol
-
-Each of the 170 options ships one standalone webp reference
-(`assets/options/<category>/<id>.webp`). Display and reference are always per-image —
-**composites/contact sheets are forbidden**, they leak wrong elements into generations.
-
-### Lock is law
-
-Once the portrait passes, `ugc_lab.py lock` writes the final CHARACTER paragraph into
-`character.json`; every later image (sheet/scene/EDIT) anchors identity to it, and
-changes only ever go through the EDIT flow.
-
-### Self-evolution ledger
-
-Every generation: `ugc_lab.py log` → view → `score`; delivery: `accept`;
-retro: `evolve` rolls up failure patterns, and with user consent ≥2 evidence runs get
-`promote`d into `evolution/learnings.md` — the skill gets sharper the more you use it.
-
-## Hard constraints
-
-- **Original only**: no likeness of real people, celebrities, influencers or copyrighted
-  characters; "make it look like X" → declined, original alternative offered.
-- Humor comes from styling, posture and attitude; never mock ethnicity, body type,
-  gender identity or background.
-- No earnings promises; platform incentive terms are governed by official docs.
-
-## Repo layout
-
+```text
+Let me choose the appearance step by step for a distinctive virtual lifestyle creator.
+Keep this character's silhouette and hairstyle; change the outfit for street interviews.
+Build an 8-panel character sheet and two everyday scenes from the selected portrait.
 ```
-ugc-character-designer/
-├── SKILL.md                # main doc (for agents): S0–S8 gated workflow
-├── README.md / README.en.md
-├── assets/
-│   ├── index.json          # 170-element index (label/fragment/look/tier/image path)
-│   └── options/<cat>/<id>.webp   # 170 single-element images + 6 tier cards
-├── data/                   # taxonomy.json / visual descriptors / zh labels / QA rubric / rules
-├── references/             # method distillation / intake question bank / gen-tool pitfalls / sources
-├── scripts/                # ugc_face.py / ugc_taxonomy.py / ugc_lab.py / build_gallery.py
-├── templates/              # character card template / prompt library T1–T7
-├── evolution/              # learnings.md (proven rules) + ledger.jsonl
-└── gallery/                # showcase: character cases + taxonomy.md full element index
-```
+
+**Requirements:** Python 3.10+ (scripts have no third-party dependencies) and an Agent that can load
+Skills, run scripts and inspect images. Image generation also requires a tool exposed by your host,
+with the relevant account access or credits. Installing the Skill does not provide an image service.
+See the [image-generation guide](references/generation-tools.md) for current tool routing,
+OmniMux setup and consistency limitations. Character projects are written to
+`ugc-characters/<slug>/` in your current workspace.
+
+## Workflow
+
+1. **Choose a direction.** Start with random concepts, guided customization or randomization with selected features locked.
+2. **Write the person.** Define their background, niche, personality, appearance anchors and signature actions; check the character card.
+3. **Make a portrait.** Generate a full-body image, inspect recognition, originality and image quality, then revise when needed.
+4. **Lock the reference.** Save the approved portrait and description as identity anchors for later images and revisions.
+5. **Expand the assets.** Build an 8-panel sheet and optional scene first-frames; inspect consistency across images.
+6. **Prepare the handoff.** Package the card, images, prompts and acceptance report, recording what passed and what still needs work.
+
+### How quality is checked
+
+| Stage | Check |
+|---|---|
+| G1 · Character card | Required fields, compatible choices, persona and originality declaration. |
+| G2 · Full-body portrait | Visual rubric score of at least 3.8/5, with required individual scores. Revisions also check identity preservation. |
+| G3 · 8-panel sheet | At least 4.0/5 overall, with required scores for cross-panel identity and reference matching. |
+| G4 · Scene references | Identity, styling and image quality after changing the setting. |
+
+**The Agent inspects each generated image and enters its visual judgments.** Scripts validate fields,
+thresholds and records; they do not inspect images or guarantee aesthetic quality. Each stage allows
+up to 3 different attempts before the Agent explains the issue and available adjustments.
+See [SKILL.md](SKILL.md) for the full workflow and the [quality rubric](data/qa-rubric.json) for criteria.
+
+### Appearance data and learning records
+
+- **Multiple character directions.** 170 options across 18 categories cover hairstyles, facial features,
+  skin tones, accessories and aesthetics. Average / Bold / Extreme tiers vary the strength of the
+  design. A Chinese conversation does not default to a Chinese character.
+- **Individual visual references.** Each appearance element has its own reference image. Visual
+  descriptions and compatibility rules guide combinations instead of relying only on short labels.
+- **Reused identity anchors.** The locked character description carries into revisions, sheets and
+  scenes, followed by another visual check.
+- **Recorded failures.** The ledger stores generation records, scores and failure tags. Experience
+  rules need supporting evidence before promotion; each new result still needs validation.
 
 ## Limitations
 
-- **Image quality depends on the text-to-image channel**: multi-reference identity edits
-  are still draft on most gateways; identity is preserved via "verbatim CHARACTER
-  paragraph + text-to-image", which can drift under extreme settings.
-- **No real-person likeness**: any "make it look like <celebrity>" is declined and
-  rerouted to an original alternative.
-- Cross-panel consistency for Extreme-tier characters in the 8-panel sheet remains
-  the hardest case and may need 2–3 iterations.
+- **Performance directions have limits.** Random character cards, signature prompts and G1/G2
+  acceptance currently focus on deadpan or serious characters. Other expressions, such as broad
+  smiles or winks, do not yet have a fully adapted acceptance workflow; changing a prompt alone
+  does not establish complete support.
+- **Consistency depends on the image tool.** Without a usable reference-image editing channel, the
+  workflow mainly reuses a written character description. Facial details can drift. Outfit changes
+  and character sheets need visual review, especially at the Extreme tier.
+- **Public output evidence is limited.** The currently published Skill output is Jiang Lingyi's
+  full-body portrait, linked below. The global character references above have not been presented
+  as complete generation-and-acceptance examples of this Skill.
+- **Original characters only.** Do not recreate the likeness of real people, celebrities, existing
+  influencers or copyrighted characters. Humor comes from styling, posture and attitude, without
+  mocking ethnicity, body type, gender identity or background.
+- **The deliverable is character assets.** This project does not directly handle video filming,
+  motion transfer, account operations or publishing. It promises no view counts or earnings.
 
-A skill that turns "an AI character" from a one-off image into a sustainable
-production asset — the character owns the difference, the format owns distribution.
+## Cases and method sources
+
+**Earlier output · Jiang Lingyi.** An original character for a costume political-drama short series,
+with one published [full-body portrait](gallery/characters/jiang-lingyi-fullbody.png). The early design
+record remains available; this README leads with the project's direction for global short-video
+characters. See the [gallery](gallery/README.md) for context.
+
+The method draws on character-design research and case studies. Appearance data comes from
+OmniMux's influencer taxonomy:
+
+- [Method distillation and original sources](references/research-distillation.md): personas, recognition anchors, behavior and character reuse.
+- [Jean Phil case study](gallery/case-study-jean-phil.md): historical research into external characters and distribution patterns; figures depend on the original sources and recording dates.
+- [Appearance gallery](gallery/taxonomy.md): individual references for all 170 options.
+
+## Development and layout
+
+[SKILL.md](SKILL.md) is the Agent's entry point. See the [intake flow](references/intake-questions.md)
+and [prompt library](templates/prompt-library.md) for interaction and image-prompt details.
+
+<details>
+<summary>Script reference and repository layout</summary>
+
+Script paths below are relative to the repository root. To create a character, run the script from
+the target workspace using its absolute Skill path; character files are written to the current
+workspace. Use each script's `--help` for subcommand arguments:
+
+```bash
+python3 scripts/ugc_face.py --help
+python3 scripts/ugc_taxonomy.py find "horn"
+python3 scripts/ugc_lab.py --help
+python3 scripts/build_gallery.py   # rebuild the appearance gallery
+python3 scripts/selftest_all.py    # data, rules, stage thresholds and Skill reference paths
+```
+
+- `ugc_face.py`: random concepts and layered customization (`random` / `init` / `menu` / `apply` / `prompt`).
+- `ugc_taxonomy.py`: lookup, compatibility checks and prompt building (`find` / `get` / `refs` / `diversity` / `build`).
+- `ugc_lab.py`: cards, generation records, scoring, locking, acceptance and learning records (`init` / `card-check` / `log` / `score` / `lock` / `accept` / `evolve` / `promote`).
+
+```text
+ugc-character-designer/
+├── SKILL.md                # Agent execution workflow
+├── README.md / README.en.md
+├── assets/                 # option index and individual reference images
+├── data/                   # appearance data, visual descriptions, rubric and rules
+├── references/             # methods, intake flow, generation guide and sources
+├── scripts/                # combination, validation, logging and gallery tools
+├── templates/              # character card and prompt templates
+├── evolution/              # experience rules and run ledger
+└── gallery/                # global design references, earlier output and appearance gallery
+```
+
+</details>
 
 ## License
 
-[MIT](LICENSE) — free to use, modify and distribute, commercially included.
+Code and documentation are [MIT](LICENSE). External reference media retain their original owners'
+rights; see the [gallery](gallery/README.md) for sources and usage notes.
